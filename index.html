@@ -1,71 +1,2074 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>KAANTEC | Industrielle & technische Reinigung</title>
-<meta name="description" content="KAANTEC – professionelle industrielle und technische Reinigung in Stuttgart und Umgebung. RLT-Anlagen, Lüftungsreinigung, Küchenabluft, VDK-Anlagen und technische Reinigung.">
+
+<meta name="description"
+content="KAANTEC – professionelle industrielle und technische Reinigung in Stuttgart und Umgebung. RLT-Anlagen, Lüftungsreinigung, Küchenabluft, VDK-Anlagen und technische Reinigung.">
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;color:#17233b;background:#fff;line-height:1.6}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}:root{--navy:#193861;--navy-dark:#071a2d;--orange:#f39200;--green:#68a91b;--light:#f5f7fa;--border:#dbe1e8}
-.container{width:min(1180px,92%);margin:auto}header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e8ebef}.navbar{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:30px}.logo{font-size:29px;font-weight:900;letter-spacing:-1px;color:var(--navy)}.logo span{color:var(--orange)}.nav-links{display:flex;align-items:center;gap:25px;font-size:14px;font-weight:700}.nav-links a:hover{color:var(--orange)}.nav-button{background:var(--orange);color:#fff!important;padding:12px 19px;border-radius:7px}.menu-button{display:none;border:0;background:none;font-size:28px;cursor:pointer}
-.hero{background:linear-gradient(90deg,rgba(7,26,45,.98),rgba(25,56,97,.91),rgba(25,56,97,.62));color:white;min-height:620px;display:flex;align-items:center;padding:90px 0}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}.badge{display:inline-block;padding:7px 15px;border:1px solid rgba(255,255,255,.4);border-radius:30px;font-size:11px;font-weight:800;letter-spacing:1px;margin-bottom:24px}.hero h1{font-size:clamp(46px,6vw,76px);line-height:.98;letter-spacing:-2px;margin-bottom:25px}.hero h1 span{color:var(--orange)}.hero p{font-size:18px;max-width:650px;color:#edf3fa;margin-bottom:30px}.buttons{display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-block;padding:14px 23px;border-radius:7px;font-weight:700;border:1px solid transparent;cursor:pointer}.btn-orange{background:var(--orange);color:white}.btn-outline{border-color:rgba(255,255,255,.5);color:white}.hero-card{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:30px}.hero-card h3{font-size:22px;margin-bottom:15px}.hero-list{list-style:none}.hero-list li{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.18)}.hero-list li::before{content:"✓";color:var(--orange);font-weight:900;margin-right:12px}
-section{padding:85px 0}.section-light{background:var(--light)}.section-label{color:var(--orange);font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:9px}.section-title{font-size:clamp(32px,4vw,48px);line-height:1.1;color:var(--navy);margin-bottom:17px}.section-intro{max-width:720px;color:#606b7c;margin-bottom:42px}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service-card{background:white;border:1px solid var(--border);border-radius:10px;padding:27px;transition:.2s}.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(20,40,70,.09)}.service-number{color:var(--orange);font-size:12px;font-weight:900;margin-bottom:8px}.service-card h3{color:var(--navy);font-size:18px;margin-bottom:9px}.service-card p{color:#667083;font-size:14px}
-.before-after{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}.comparison{background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden}.comparison h3{padding:20px 22px 5px;color:var(--navy)}.comparison p{padding:0 22px 18px;color:#697486;font-size:14px}.image-pair{display:grid;grid-template-columns:1fr 1fr}.image-box{position:relative;min-height:260px;background:#dfe4ea;overflow:hidden}.image-box img{width:100%;height:260px;object-fit:cover}.image-label{position:absolute;bottom:0;left:0;padding:8px 13px;background:rgba(0,0,0,.75);color:white;font-size:12px;font-weight:900}.image-box.after .image-label{background:var(--green)}.example-note{margin-top:25px;padding:16px 20px;border-left:4px solid var(--orange);background:white;color:#596474;font-size:13px}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}.about-text p{margin-bottom:17px;color:#5e6878}.dark-card{background:var(--navy);color:white;border-radius:14px;padding:35px}.dark-card h3{font-size:25px;margin-bottom:18px}.dark-list{list-style:none}.dark-list li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.18)}.dark-list li::before{content:"✓";color:var(--orange);font-weight:900;margin-right:12px}
-.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.benefit{padding:28px;background:white;border:1px solid var(--border);border-radius:10px}.benefit-icon{font-size:30px;margin-bottom:10px}.benefit h3{color:var(--navy);margin-bottom:8px}.benefit p{color:#667083;font-size:14px}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}.step{padding:25px 18px;background:white;border:1px solid var(--border);border-radius:10px}.step-number{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--green);color:white;font-weight:900;margin-bottom:15px}.step h3{font-size:16px;color:var(--navy);margin-bottom:7px}.step p{font-size:13px;color:#667083}
-.faq{max-width:850px;margin:auto}details{border-bottom:1px solid var(--border);padding:20px 0}summary{cursor:pointer;font-weight:700;color:var(--navy)}details p{padding-top:12px;color:#667083}
-.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px}.contact-info{background:var(--navy);color:white;padding:35px;border-radius:14px}.contact-info h3{font-size:27px;margin-bottom:20px}.contact-item{margin:22px 0}.contact-item strong{display:block;color:var(--orange);margin-bottom:3px}.form{display:grid;gap:14px}.form input,.form textarea,.form select{width:100%;padding:15px;border:1px solid #ccd3dc;border-radius:7px;font:inherit}.form textarea{min-height:150px;resize:vertical}.checkbox{display:flex;gap:9px;align-items:flex-start;font-size:13px;color:#596474}.checkbox input{width:auto;margin-top:5px}
-.legal{max-width:900px;margin:auto}.legal h1{color:var(--navy);font-size:42px;margin-bottom:30px}.legal h2{color:var(--navy);margin:30px 0 10px}.legal p{color:#596474;margin-bottom:13px}
-footer{background:var(--navy-dark);color:white;padding:65px 0 25px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:45px}.footer-logo{font-size:29px;font-weight:900;margin-bottom:14px}.footer-logo span{color:var(--orange)}footer h3{font-size:16px;margin-bottom:17px}footer p,footer li,footer a{color:#b9c4d2;font-size:14px}footer ul{list-style:none}footer li{margin-bottom:9px}footer a:hover{color:var(--orange)}.footer-bottom{margin-top:45px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-@media(max-width:900px){.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:white;padding:20px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--border)}.nav-links.active{display:flex}.menu-button{display:block}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.services-grid{grid-template-columns:repeat(2,1fr)}.benefits-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){section{padding:65px 0}.hero h1{font-size:48px}.services-grid,.benefits-grid,.before-after,.steps,.footer-grid{grid-template-columns:1fr}.image-box,.image-box img{min-height:190px;height:190px}.navbar{min-height:64px}}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0
+}
+
+html{
+scroll-behavior:smooth
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:#17233b;
+background:#fff;
+line-height:1.6
+}
+
+a{
+text-decoration:none;
+color:inherit
+}
+
+img{
+max-width:100%;
+display:block
+}
+
+:root{
+--navy:#193861;
+--navy-dark:#071a2d;
+--orange:#f39200;
+--green:#68a91b;
+--light:#f5f7fa;
+--border:#dbe1e8;
+--text:#596474
+}
+
+.container{
+width:min(1180px,92%);
+margin:auto
+}
+
+/* NAVIGATION */
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:#fff;
+border-bottom:1px solid #e8ebef
+}
+
+.navbar{
+min-height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px
+}
+
+.logo{
+font-size:29px;
+font-weight:900;
+letter-spacing:-1px;
+color:var(--navy)
+}
+
+.logo span{
+color:var(--orange)
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:22px;
+font-size:14px;
+font-weight:700
+}
+
+.nav-links a:hover{
+color:var(--orange)
+}
+
+.nav-button{
+background:var(--orange);
+color:#fff!important;
+padding:12px 19px;
+border-radius:7px
+}
+
+.menu-button{
+display:none;
+border:0;
+background:none;
+font-size:28px;
+cursor:pointer
+}
+
+/* HERO */
+
+.hero{
+background:
+linear-gradient(
+90deg,
+rgba(7,26,45,.98),
+rgba(25,56,97,.91),
+rgba(25,56,97,.62)
+);
+color:white;
+min-height:620px;
+display:flex;
+align-items:center;
+padding:90px 0
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:60px;
+align-items:center
+}
+
+.badge{
+display:inline-block;
+padding:7px 15px;
+border:1px solid rgba(255,255,255,.4);
+border-radius:30px;
+font-size:11px;
+font-weight:800;
+letter-spacing:1px;
+margin-bottom:24px
+}
+
+.hero h1{
+font-size:clamp(46px,6vw,76px);
+line-height:.98;
+letter-spacing:-2px;
+margin-bottom:25px
+}
+
+.hero h1 span{
+color:var(--orange)
+}
+
+.hero p{
+font-size:18px;
+max-width:650px;
+color:#edf3fa;
+margin-bottom:30px
+}
+
+.buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap
+}
+
+.btn{
+display:inline-block;
+padding:14px 23px;
+border-radius:7px;
+font-weight:700;
+border:1px solid transparent;
+cursor:pointer
+}
+
+.btn-orange{
+background:var(--orange);
+color:white
+}
+
+.btn-outline{
+border-color:rgba(255,255,255,.5);
+color:white
+}
+
+.hero-card{
+background:rgba(255,255,255,.11);
+border:1px solid rgba(255,255,255,.25);
+border-radius:14px;
+padding:30px
+}
+
+.hero-card h3{
+font-size:22px;
+margin-bottom:15px
+}
+
+.hero-list{
+list-style:none
+}
+
+.hero-list li{
+padding:13px 0;
+border-bottom:1px solid rgba(255,255,255,.18)
+}
+
+.hero-list li::before{
+content:"✓";
+color:var(--orange);
+font-weight:900;
+margin-right:12px
+}
+
+/* SECTIONS */
+
+section{
+padding:85px 0
+}
+
+.section-light{
+background:var(--light)
+}
+
+.section-label{
+color:var(--orange);
+font-size:12px;
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:9px
+}
+
+.section-title{
+font-size:clamp(32px,4vw,48px);
+line-height:1.1;
+color:var(--navy);
+margin-bottom:17px
+}
+
+.section-title span{
+color:var(--green)
+}
+
+.section-intro{
+max-width:760px;
+color:#606b7c;
+margin-bottom:42px
+}
+
+/* LEISTUNGEN */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.service-card{
+background:white;
+border:1px solid var(--border);
+border-radius:10px;
+padding:27px;
+transition:.2s
+}
+
+.service-card:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 30px rgba(20,40,70,.09)
+}
+
+.service-number{
+color:var(--orange);
+font-size:12px;
+font-weight:900;
+margin-bottom:8px
+}
+
+.service-card h3{
+color:var(--navy);
+font-size:18px;
+margin-bottom:9px
+}
+
+.service-card p{
+color:#667083;
+font-size:14px
+}
+
+/* VORHER / NACHHER */
+
+.comparison{
+background:white;
+border:1px solid var(--border);
+border-radius:12px;
+overflow:hidden;
+max-width:1100px;
+margin:auto
+}
+
+.comparison img{
+width:100%;
+height:auto;
+border-radius:10px
+}
+
+.example-note{
+margin-top:25px;
+padding:16px 20px;
+border-left:4px solid var(--orange);
+background:white;
+color:#596474;
+font-size:13px
+}
+
+/* NORMEN */
+
+.standards-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px
+}
+
+.standard-card{
+background:white;
+border:1px solid var(--border);
+border-radius:12px;
+padding:28px;
+position:relative;
+transition:.2s
+}
+
+.standard-card:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 28px rgba(20,40,70,.08)
+}
+
+.standard-tag{
+display:inline-block;
+background:var(--navy);
+color:white;
+padding:5px 10px;
+border-radius:5px;
+font-size:11px;
+font-weight:800;
+margin-bottom:13px
+}
+
+.standard-card h3{
+color:var(--navy);
+font-size:20px;
+margin-bottom:10px
+}
+
+.standard-card p{
+color:#667083;
+font-size:14px
+}
+
+.standard-card strong{
+color:var(--navy)
+}
+
+.standard-note{
+margin-top:28px;
+padding:20px 22px;
+background:#fff;
+border:1px solid var(--border);
+border-left:4px solid var(--green);
+border-radius:8px;
+color:#596474;
+font-size:14px
+}
+
+/* ÜBER UNS */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:65px;
+align-items:center
+}
+
+.about-text p{
+margin-bottom:17px;
+color:#5e6878
+}
+
+.dark-card{
+background:var(--navy);
+color:white;
+border-radius:14px;
+padding:35px
+}
+
+.dark-card h3{
+font-size:25px;
+margin-bottom:18px
+}
+
+.dark-list{
+list-style:none
+}
+
+.dark-list li{
+padding:12px 0;
+border-bottom:1px solid rgba(255,255,255,.18)
+}
+
+.dark-list li::before{
+content:"✓";
+color:var(--orange);
+font-weight:900;
+margin-right:12px
+}
+
+/* VORTEILE */
+
+.benefits-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
+}
+
+.benefit{
+padding:28px;
+background:white;
+border:1px solid var(--border);
+border-radius:10px
+}
+
+.benefit-icon{
+font-size:30px;
+margin-bottom:10px
+}
+
+.benefit h3{
+color:var(--navy);
+margin-bottom:8px
+}
+
+.benefit p{
+color:#667083;
+font-size:14px
+}
+
+/* ABLAUF */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:15px
+}
+
+.step{
+padding:25px 18px;
+background:white;
+border:1px solid var(--border);
+border-radius:10px
+}
+
+.step-number{
+width:38px;
+height:38px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:var(--green);
+color:white;
+font-weight:900;
+margin-bottom:15px
+}
+
+.step h3{
+font-size:16px;
+color:var(--navy);
+margin-bottom:7px
+}
+
+.step p{
+font-size:13px;
+color:#667083
+}
+
+/* FAQ */
+
+.faq{
+max-width:850px;
+margin:auto
+}
+
+details{
+border-bottom:1px solid var(--border);
+padding:20px 0
+}
+
+summary{
+cursor:pointer;
+font-weight:700;
+color:var(--navy)
+}
+
+details p{
+padding-top:12px;
+color:#667083
+}
+
+/* KONTAKT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:.8fr 1.2fr;
+gap:45px
+}
+
+.contact-info{
+background:var(--navy);
+color:white;
+padding:35px;
+border-radius:14px
+}
+
+.contact-info h3{
+font-size:27px;
+margin-bottom:20px
+}
+
+.contact-item{
+margin:22px 0
+}
+
+.contact-item strong{
+display:block;
+color:var(--orange);
+margin-bottom:3px
+}
+
+.form{
+display:grid;
+gap:14px
+}
+
+.form input,
+.form textarea,
+.form select{
+width:100%;
+padding:15px;
+border:1px solid #ccd3dc;
+border-radius:7px;
+font:inherit
+}
+
+.form textarea{
+min-height:150px;
+resize:vertical
+}
+
+.checkbox{
+display:flex;
+gap:9px;
+align-items:flex-start;
+font-size:13px;
+color:#596474
+}
+
+.checkbox input{
+width:auto;
+margin-top:5px
+}
+
+/* RECHTLICHES */
+
+.legal{
+max-width:900px;
+margin:auto
+}
+
+.legal h1{
+color:var(--navy);
+font-size:42px;
+margin-bottom:30px
+}
+
+.legal h2{
+color:var(--navy);
+margin:30px 0 10px
+}
+
+.legal p{
+color:#596474;
+margin-bottom:13px
+}
+
+/* FOOTER */
+
+footer{
+background:var(--navy-dark);
+color:white;
+padding:65px 0 25px
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:1.4fr 1fr 1fr 1fr;
+gap:45px
+}
+
+.footer-logo{
+font-size:29px;
+font-weight:900;
+margin-bottom:14px
+}
+
+.footer-logo span{
+color:var(--orange)
+}
+
+footer h3{
+font-size:16px;
+margin-bottom:17px
+}
+
+footer p,
+footer li,
+footer a{
+color:#b9c4d2;
+font-size:14px
+}
+
+footer ul{
+list-style:none
+}
+
+footer li{
+margin-bottom:9px
+}
+
+footer a:hover{
+color:var(--orange)
+}
+
+.footer-bottom{
+margin-top:45px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.15);
+display:flex;
+justify-content:space-between;
+gap:20px;
+flex-wrap:wrap
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+.nav-links{
+gap:14px;
+font-size:13px
+}
+
+.hero-grid,
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr
+}
+
+.services-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.benefits-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.steps{
+grid-template-columns:repeat(2,1fr)
+}
+
+.footer-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+}
+
+@media(max-width:800px){
+
+.nav-links{
+display:none;
+position:absolute;
+top:72px;
+left:0;
+right:0;
+background:white;
+padding:20px;
+flex-direction:column;
+align-items:stretch;
+border-bottom:1px solid var(--border)
+}
+
+.nav-links.active{
+display:flex
+}
+
+.menu-button{
+display:block
+}
+
+.standards-grid{
+grid-template-columns:1fr
+}
+
+}
+
+@media(max-width:600px){
+
+section{
+padding:65px 0
+}
+
+.hero{
+min-height:auto;
+padding:70px 0
+}
+
+.hero h1{
+font-size:48px
+}
+
+.services-grid,
+.benefits-grid,
+.steps,
+.footer-grid{
+grid-template-columns:1fr
+}
+
+.navbar{
+min-height:64px
+}
+
+.nav-links{
+top:64px
+}
+
+.comparison{
+border-radius:8px
+}
+
+.standard-card{
+padding:23px
+}
+
+}
+
 </style>
 </head>
+
+
 <body>
-<header><div class="container navbar"><a href="#start" class="logo">KAAN<span>TEC</span></a><button class="menu-button" onclick="toggleMenu()">☰</button><nav class="nav-links" id="navLinks"><a href="#start">Startseite</a><a href="#leistungen">Leistungen</a><a href="#referenzen">Beispiele</a><a href="#ueber-uns">Über uns</a><a href="#vorteile">Vorteile</a><a href="#ablauf">Ablauf</a><a href="#faq">FAQ</a><a href="#kontakt">Kontakt</a><a href="#kontakt" class="nav-button">Anfrage stellen</a></nav></div></header>
-<section class="hero" id="start"><div class="container hero-grid"><div><div class="badge">INDUSTRIAL & TECHNICAL CLEANING</div><h1>Technische<br>Reinigung.<br><span>Professionell<br>gelöst.</span></h1><p>KAANTEC steht für industrielle und technische Reinigungslösungen für Unternehmen in Stuttgart und Umgebung.</p><div class="buttons"><a href="#kontakt" class="btn btn-orange">Beratung anfragen</a><a href="#leistungen" class="btn btn-outline">Leistungen ansehen</a></div></div><div class="hero-card"><h3>Unsere Schwerpunkte</h3><ul class="hero-list"><li>Technische Anlagen</li><li>Industrie- und Anlagenreinigung</li><li>Lüftungs- und RLT-Systeme</li><li>Küchenabluftreinigung</li><li>VDK-Anlagen</li><li>Individuelle Reinigungslösungen</li></ul></div></div></section>
-<section class="section-light" id="leistungen"><div class="container"><div class="section-label">Leistungen</div><h2 class="section-title">Reinigung, die technische Systeme versteht.</h2><p class="section-intro">Wir konzentrieren uns auf anspruchsvolle industrielle, technische und infrastrukturelle Anwendungen und entwickeln Lösungen passend zu den jeweiligen Anforderungen.</p><div class="services-grid">
-<div class="service-card"><div class="service-number">01</div><h3>Abluftreinigung</h3><p>Reinigung von Abluftsystemen, Kanälen und technischen Komponenten.</p></div>
-<div class="service-card"><div class="service-number">02</div><h3>Brandschutz-Hygiene</h3><p>Reinigung und hygienische Pflege technischer Systeme.</p></div>
-<div class="service-card"><div class="service-number">03</div><h3>Facility Management</h3><p>Technische Dienstleistungen und Unterstützung im Gebäudebetrieb.</p></div>
-<div class="service-card"><div class="service-number">04</div><h3>Gebäudereinigung</h3><p>Professionelle Reinigung von gewerblich genutzten Gebäuden.</p></div>
-<div class="service-card"><div class="service-number">05</div><h3>Großküchenreinigung</h3><p>Reinigung von Küchenabluft, Abzugshauben und technischen Bereichen.</p></div>
-<div class="service-card"><div class="service-number">06</div><h3>Industriereinigung</h3><p>Reinigung industrieller Bereiche, Anlagen und technischer Komponenten.</p></div>
-<div class="service-card"><div class="service-number">07</div><h3>Instandhaltungsarbeiten</h3><p>Unterstützende Arbeiten bei technischen Anlagen und Betriebseinrichtungen.</p></div>
-<div class="service-card"><div class="service-number">08</div><h3>Lüftungsreinigung</h3><p>Reinigung und technische Dienstleistungen rund um Lüftungs- und RLT-Anlagen.</p></div>
-<div class="service-card"><div class="service-number">09</div><h3>Maschinenwartung</h3><p>Unterstützende Wartungs- und Reinigungsleistungen für technische Anlagen.</p></div>
-<div class="service-card"><div class="service-number">10</div><h3>Reinigung von VDK-Anlagen</h3><p>Technische Reinigung von VDK-Anlagen und deren Komponenten.</p></div>
-</div></div></section>
-<section id="referenzen"><div class="container"><div class="section-label">Beispielarbeiten</div><h2 class="section-title">Vorher – <span style="color:#68a91b;">Nachher</span></h2><p class="section-intro">Beispielhafte Visualisierungen typischer Reinigungsarbeiten. Die Bilder dienen ausschließlich zur Veranschaulichung und stellen keine konkreten Kundenprojekte dar.</p><div class="comparison" style="max-width:1100px;margin:auto;"><img src="/vorher-nachher-beispiele.png" alt="Vorher-Nachher-Beispiele für RLT-Anlagen, Industrie-Küchenabluft, Abzugshauben und VDK-Anlagen" style="width:100%;height:auto;border-radius:10px;"></div><div class="example-note"><strong>Hinweis:</strong> Die dargestellten Vorher-Nachher-Aufnahmen dienen ausschließlich der Veranschaulichung typischer Reinigungsarbeiten und stellen keine konkreten Kundenprojekte dar.</div></div></section>
-<section class="section-light" id="ueber-uns"><div class="container about-grid"><div class="about-text"><div class="section-label">Über uns</div><h2 class="section-title">Technische Reinigung mit System.</h2><p>KAANTEC steht für professionelle industrielle und technische Reinigungslösungen.</p><p>Unser Fokus liegt auf technischen Anlagen, Produktionsbereichen, Lüftungs- und RLT-Systemen sowie anspruchsvollen technischen Anwendungen.</p><p>Wir verbinden technisches Verständnis mit sorgfältiger und zuverlässiger Ausführung.</p></div><div class="dark-card"><h3>Unser Anspruch</h3><ul class="dark-list"><li>Professionelle Ausführung</li><li>Technisches Verständnis</li><li>Zuverlässige Leistungen</li><li>Saubere Dokumentation</li><li>Individuelle Lösungen</li><li>Transparente Kommunikation</li></ul></div></div></section>
-<section id="vorteile"><div class="container"><div class="section-label">Vorteile</div><h2 class="section-title">Warum KAANTEC?</h2><p class="section-intro">Technische Reinigung erfordert mehr als Sauberkeit. Entscheidend sind Verständnis für die Anlage, sorgfältige Ausführung und zuverlässige Kommunikation.</p><div class="benefits-grid">
-<div class="benefit"><div class="benefit-icon">✓</div><h3>Technisches Verständnis</h3><p>Wir betrachten nicht nur die Oberfläche, sondern das technische System dahinter.</p></div>
-<div class="benefit"><div class="benefit-icon">✓</div><h3>Sorgfältige Ausführung</h3><p>Reinigung mit Fokus auf Funktion, Hygiene und Werterhalt.</p></div>
-<div class="benefit"><div class="benefit-icon">✓</div><h3>Individuelle Lösungen</h3><p>Jede Anlage und jeder Einsatzbereich kann unterschiedliche Anforderungen haben.</p></div>
-<div class="benefit"><div class="benefit-icon">✓</div><h3>Zuverlässigkeit</h3><p>Klare Kommunikation, abgestimmte Termine und nachvollziehbare Abläufe.</p></div>
-<div class="benefit"><div class="benefit-icon">✓</div><h3>Dokumentation</h3><p>Auf Wunsch können Reinigungsarbeiten nachvollziehbar dokumentiert werden.</p></div>
-<div class="benefit"><div class="benefit-icon">✓</div><h3>Region Stuttgart</h3><p>Ansprechpartner für Unternehmen in Stuttgart und Umgebung.</p></div>
-</div></div></section>
-<section class="section-light" id="ablauf"><div class="container"><div class="section-label">Ablauf</div><h2 class="section-title">Von der Anfrage bis zur Reinigung.</h2><p class="section-intro">Ein klarer Ablauf schafft Transparenz und sorgt dafür, dass die Anforderungen Ihrer Anlage verstanden werden.</p><div class="steps">
-<div class="step"><div class="step-number">1</div><h3>Anfrage</h3><p>Sie kontaktieren uns mit Ihrem Anliegen.</p></div>
-<div class="step"><div class="step-number">2</div><h3>Beratung</h3><p>Wir besprechen Anforderungen und Einsatzbereich.</p></div>
-<div class="step"><div class="step-number">3</div><h3>Besichtigung</h3><p>Bei Bedarf erfolgt eine Vor-Ort-Besichtigung.</p></div>
-<div class="step"><div class="step-number">4</div><h3>Reinigung</h3><p>Durchführung der vereinbarten Arbeiten.</p></div>
-<div class="step"><div class="step-number">5</div><h3>Dokumentation</h3><p>Auf Wunsch nachvollziehbare Dokumentation der ausgeführten Arbeiten.</p></div>
-</div></div></section>
-<section id="faq"><div class="container"><div class="section-label">FAQ</div><h2 class="section-title">Häufige Fragen</h2><div class="faq">
-<details><summary>Welche Anlagen reinigen Sie?</summary><p>Unser Schwerpunkt liegt auf technischen Anlagen, Lüftungs- und RLT-Systemen, Küchenabluft, VDK-Anlagen sowie industriellen und technischen Komponenten.</p></details>
-<details><summary>Arbeiten Sie auch für Unternehmen?</summary><p>Ja. KAANTEC richtet sich insbesondere an gewerbliche und industrielle Kunden.</p></details>
-<details><summary>Kann ich zunächst eine unverbindliche Anfrage stellen?</summary><p>Ja. Kontaktieren Sie uns telefonisch oder per E-Mail und schildern Sie kurz Ihr Anliegen.</p></details>
-<details><summary>In welcher Region sind Sie tätig?</summary><p>Unser Schwerpunkt liegt in Stuttgart und Umgebung.</p></details>
-<details><summary>Sind die Vorher-/Nachher-Bilder echte Kundenprojekte?</summary><p>Nein. Die auf dieser Website verwendeten Bilder sind KI-generierte Beispielvisualisierungen und werden entsprechend gekennzeichnet.</p></details>
-</div></div></section>
-<section class="section-light" id="kontakt"><div class="container contact-grid"><div class="contact-info"><h3>Jetzt Anfrage stellen</h3><p>Sie benötigen eine technische Reinigung? Kontaktieren Sie uns gerne.</p><div class="contact-item"><strong>Telefon</strong><a href="tel:+4917634680568">0176 34680568</a></div><div class="contact-item"><strong>E-Mail</strong><a href="mailto:info@kaantec.de">info@kaantec.de</a></div><div class="contact-item"><strong>Adresse</strong>Schliffkopfstraße 5<br>70569 Stuttgart</div><div class="contact-item"><strong>Einsatzgebiet</strong>Stuttgart und Umgebung</div></div>
-<form class="form" action="mailto:info@kaantec.de" method="post" enctype="text/plain"><input type="text" name="Name" placeholder="Ihr Name *" required><input type="email" name="E-Mail" placeholder="Ihre E-Mail-Adresse *" required><input type="tel" name="Telefon" placeholder="Ihre Telefonnummer"><select name="Leistung"><option value="">Welche Leistung benötigen Sie?</option><option>RLT- / Lüftungsreinigung</option><option>Küchenabluftreinigung</option><option>VDK-Anlagen</option><option>Industriereinigung</option><option>Technische Reinigung</option><option>Gebäudereinigung</option><option>Andere Anfrage</option></select><textarea name="Nachricht" placeholder="Beschreiben Sie kurz Ihr Anliegen *" required></textarea><label class="checkbox"><input type="checkbox" required><span>Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Angaben zur Bearbeitung meiner Anfrage zu.</span></label><button type="submit" class="btn btn-orange">Anfrage senden</button></form></div></section>
-<section id="impressum"><div class="container legal"><h1>Impressum</h1><h2>Angaben gemäß § 5 DDG</h2><p><strong>KAANTEC</strong><br>Inhaber: Bilal Misirlioglu<br>Schliffkopfstraße 5<br>70569 Stuttgart<br>Deutschland</p><h2>Kontakt</h2><p>Telefon: <a href="tel:+4917634680568">0176 34680568</a></p><p>E-Mail: <a href="mailto:info@kaantec.de">info@kaantec.de</a></p><h2>Umsatzsteuer</h2><p>Eine Umsatzsteuer-Identifikationsnummer wird nur angegeben, wenn eine solche tatsächlich vergeben wurde.</p><h2>Verantwortlich für den Inhalt</h2><p>Bilal Misirlioglu<br>Schliffkopfstraße 5<br>70569 Stuttgart</p></div></section>
-<section class="section-light" id="datenschutz"><div class="container legal"><h1>Datenschutzerklärung</h1><h2>1. Verantwortlicher</h2><p>KAANTEC<br>Inhaber: Bilal Misirlioglu<br>Schliffkopfstraße 5<br>70569 Stuttgart<br>Deutschland</p><p>Telefon: 0176 34680568<br>E-Mail: info@kaantec.de</p><h2>2. Verarbeitung personenbezogener Daten</h2><p>Beim Besuch dieser Website können technisch notwendige Daten verarbeitet werden, die für die Bereitstellung und Sicherheit der Website erforderlich sind.</p><h2>3. Kontaktaufnahme</h2><p>Wenn Sie uns per E-Mail, Telefon oder über das Kontaktformular kontaktieren, verarbeiten wir die von Ihnen mitgeteilten Angaben zur Bearbeitung Ihrer Anfrage und zur Kommunikation mit Ihnen.</p><h2>4. Rechtsgrundlage</h2><p>Die Verarbeitung personenbezogener Daten erfolgt, soweit erforderlich, auf Grundlage der jeweils anwendbaren Vorschriften der Datenschutz-Grundverordnung (DSGVO).</p><h2>5. Speicherdauer</h2><p>Personenbezogene Daten werden nur so lange gespeichert, wie dies für den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.</p><h2>6. Ihre Rechte</h2><p>Sie haben im Rahmen der gesetzlichen Voraussetzungen insbesondere das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch gegen bestimmte Verarbeitungen.</p><h2>7. Externe Dienste</h2><p>Auf dieser Website werden derzeit keine Analyse-, Werbe- oder Trackingdienste eingebunden.</p><p>Sollten zukünftig externe Dienste eingebunden werden, muss diese Datenschutzerklärung entsprechend angepasst werden.</p><h2>8. Kontakt zum Datenschutz</h2><p>Bei Fragen zur Verarbeitung personenbezogener Daten können Sie uns über die oben genannte E-Mail-Adresse kontaktieren.</p></div></section>
-<footer><div class="container"><div class="footer-grid"><div><div class="footer-logo">KAAN<span>TEC</span></div><p>Industrielle & technische Reinigung für Unternehmen in Stuttgart und Umgebung.</p></div><div><h3>Leistungen</h3><ul><li><a href="#leistungen">Abluftreinigung</a></li><li><a href="#leistungen">Lüftungsreinigung</a></li><li><a href="#leistungen">Küchenabluft</a></li><li><a href="#leistungen">Industriereinigung</a></li><li><a href="#leistungen">VDK-Anlagen</a></li></ul></div><div><h3>Kontakt</h3><ul><li><a href="tel:+4917634680568">0176 34680568</a></li><li><a href="mailto:info@kaantec.de">info@kaantec.de</a></li><li>Schliffkopfstraße 5</li><li>70569 Stuttgart</li></ul></div><div><h3>Rechtliches</h3><ul><li><a href="#impressum">Impressum</a></li><li><a href="#datenschutz">Datenschutzerklärung</a></li></ul></div></div><div class="footer-bottom"><div>© 2026 KAANTEC – Alle Rechte vorbehalten.</div><div>Technische & industrielle Reinigung</div></div></div></footer>
-<script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active")}document.querySelectorAll(".nav-links a").forEach(function(link){link.addEventListener("click",function(){document.getElementById("navLinks").classList.remove("active")})});</script>
+
+<header>
+
+<div class="container navbar">
+
+<a href="#start" class="logo">
+KAAN<span>TEC</span>
+</a>
+
+<button class="menu-button" onclick="toggleMenu()">☰</button>
+
+<nav class="nav-links" id="navLinks">
+
+<a href="#start">Startseite</a>
+<a href="#leistungen">Leistungen</a>
+<a href="#referenzen">Beispiele</a>
+<a href="#normen">Normen</a>
+<a href="#ueber-uns">Über uns</a>
+<a href="#vorteile">Vorteile</a>
+<a href="#ablauf">Ablauf</a>
+<a href="#faq">FAQ</a>
+<a href="#kontakt">Kontakt</a>
+
+<a href="#kontakt" class="nav-button">
+Anfrage stellen
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="start">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">
+INDUSTRIAL & TECHNICAL CLEANING
+</div>
+
+<h1>
+Technische<br>
+Reinigung.<br>
+<span>Professionell<br>gelöst.</span>
+</h1>
+
+<p>
+KAANTEC steht für industrielle und technische Reinigungslösungen
+für Unternehmen in Stuttgart und Umgebung.
+</p>
+
+<div class="buttons">
+
+<a href="#kontakt" class="btn btn-orange">
+Beratung anfragen
+</a>
+
+<a href="#leistungen" class="btn btn-outline">
+Leistungen ansehen
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<h3>
+Unsere Schwerpunkte
+</h3>
+
+<ul class="hero-list">
+
+<li>Technische Anlagen</li>
+<li>Industrie- und Anlagenreinigung</li>
+<li>Lüftungs- und RLT-Systeme</li>
+<li>Küchenabluftreinigung</li>
+<li>VDK-Anlagen</li>
+<li>Individuelle Reinigungslösungen</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LEISTUNGEN -->
+
+<section class="section-light" id="leistungen">
+
+<div class="container">
+
+<div class="section-label">
+Leistungen
+</div>
+
+<h2 class="section-title">
+Reinigung, die technische Systeme versteht.
+</h2>
+
+<p class="section-intro">
+Wir konzentrieren uns auf anspruchsvolle industrielle,
+technische und infrastrukturelle Anwendungen und entwickeln
+Lösungen passend zu den jeweiligen Anforderungen.
+</p>
+
+
+<div class="services-grid">
+
+<div class="service-card">
+<div class="service-number">01</div>
+<h3>Abluftreinigung</h3>
+<p>
+Reinigung von Abluftsystemen, Kanälen und technischen Komponenten.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-number">02</div>
+<h3>Brandschutz-Hygiene</h3>
+<p>
+Reinigung und hygienische Pflege technischer Systeme.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-number">03</div>
+<h3>Facility Management</h3>
+<p>
+Technische Dienstleistungen und Unterstützung im Gebäudebetrieb.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-number">04</div>
+<h3>Gebäudereinigung</h3>
+<p>
+Professionelle Reinigung von gewerblich genutzten Gebäuden.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-number">05</div>
+<h3>Großküchenreinigung</h3>
+<p>
+Reinigung von Küchenabluft, Abzugshauben und technischen Bereichen.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-number">06</div>
+<h3>Industriereinigung</h3>
+<p>
+Reinigung industrieller Bereiche, Anlagen und technischer Komponenten.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-number">07</div>
+<h3>Instandhaltungsarbeiten</h3>
+<p>
+Unterstützende Arbeiten bei technischen Anlagen und Betriebseinrichtungen.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-number">08</div>
+<h3>Lüftungsreinigung</h3>
+<p>
+Reinigung und technische Dienstleistungen rund um Lüftungs- und RLT-Anlagen.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-number">09</div>
+<h3>Maschinenwartung</h3>
+<p>
+Unterstützende Wartungs- und Reinigungsleistungen für technische Anlagen.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-number">10</div>
+<h3>Reinigung von VDK-Anlagen</h3>
+<p>
+Technische Reinigung von VDK-Anlagen und deren Komponenten.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BEISPIELARBEITEN -->
+
+<section id="referenzen">
+
+<div class="container">
+
+<div class="section-label">
+Beispielarbeiten
+</div>
+
+<h2 class="section-title">
+Vorher – <span>Nachher</span>
+</h2>
+
+<p class="section-intro">
+Beispielhafte Visualisierungen typischer Reinigungsarbeiten.
+Die Bilder dienen ausschließlich zur Veranschaulichung und stellen
+keine konkreten Kundenprojekte dar.
+</p>
+
+<div class="comparison">
+
+<img
+src="/vorher-nachher-beispiele.png"
+alt="Vorher-Nachher-Beispiele für RLT-Anlagen, Industrie-Küchenabluft, Abzugshauben und VDK-Anlagen"
+>
+
+</div>
+
+<div class="example-note">
+
+<strong>Hinweis:</strong>
+Die dargestellten Vorher-Nachher-Aufnahmen dienen ausschließlich
+der Veranschaulichung typischer Reinigungsarbeiten und stellen
+keine konkreten Kundenprojekte dar.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NORMEN -->
+
+<section class="section-light" id="normen">
+
+<div class="container">
+
+<div class="section-label">
+Normen & Richtlinien
+</div>
+
+<h2 class="section-title">
+Technische Reinigung nach relevanten Regelwerken.
+</h2>
+
+<p class="section-intro">
+Je nach Anlage, Nutzung und Aufgabenstellung können unterschiedliche
+technische Regeln und Richtlinien relevant sein. Die nachfolgenden
+Regelwerke bilden wichtige fachliche Grundlagen für die jeweiligen
+Anwendungsbereiche.
+</p>
+
+
+<div class="standards-grid">
+
+
+<div class="standard-card">
+
+<div class="standard-tag">
+RLT / HYGIENE
+</div>
+
+<h3>
+VDI 6022 Blatt 1
+</h3>
+
+<p>
+<strong>Raumlufttechnik, Raumluftqualität –
+Hygieneanforderungen an raumlufttechnische Anlagen und Geräte.</strong>
+</p>
+
+<p style="margin-top:12px;">
+Die Richtlinienreihe VDI 6022 behandelt die Hygiene von
+RLT-Anlagen und Geräten und bildet eine wichtige Grundlage
+für den hygienischen Betrieb entsprechender Anlagen.
+</p>
+
+</div>
+
+
+<div class="standard-card">
+
+<div class="standard-tag">
+RLT / REINIGUNG
+</div>
+
+<h3>
+VDI/ÖFR/SWKI 6022 Blatt 8
+</h3>
+
+<p>
+<strong>
+Reinigung von RLT-Anlagen und Luftleitungen.
+</strong>
+</p>
+
+<p style="margin-top:12px;">
+Die Richtlinie behandelt Reinigungskonzepte,
+Reinigungsverfahren und Reinigungsprozesse für
+RLT-Anlagen, Luftleitungen sowie zentrale und dezentrale
+Komponenten.
+</p>
+
+</div>
+
+
+<div class="standard-card">
+
+<div class="standard-tag">
+KÜCHENLÜFTUNG
+</div>
+
+<h3>
+VDI 2052 Blatt 1
+</h3>
+
+<p>
+<strong>
+Raumlufttechnik – Küchen.
+</strong>
+</p>
+
+<p style="margin-top:12px;">
+Diese Richtlinie behandelt unter anderem die Planung,
+Dimensionierung und den Aufbau von raumlufttechnischen
+Anlagen in gewerblichen Küchen.
+</p>
+
+</div>
+
+
+<div class="standard-card">
+
+<div class="standard-tag">
+KÜCHENABLUFT / REINIGUNG
+</div>
+
+<h3>
+VDI 2052 Blatt 2
+</h3>
+
+<p>
+<strong>
+Raumlufttechnik – Küchen –
+Reinigung von Abluftanlagen.
+</strong>
+</p>
+
+<p style="margin-top:12px;">
+Die Richtlinie behandelt die Reinigung von Abluftanlagen
+in gewerblichen Küchen und berücksichtigt dabei unter
+anderem Brandschutz, Hygiene, Energieeinsparung und Arbeitsschutz.
+</p>
+
+</div>
+
+
+<div class="standard-card">
+
+<div class="standard-tag">
+QUALIFIKATION
+</div>
+
+<h3>
+VDI-MT / 6022 Blatt 8.1
+</h3>
+
+<p>
+<strong>
+Qualifizierung von Personal für die Reinigung
+von RLT-Anlagen und Luftleitungen.
+</strong>
+</p>
+
+<p style="margin-top:12px;">
+Für bestimmte Tätigkeiten und Verantwortlichkeiten können
+entsprechende Qualifikationsanforderungen relevant sein.
+Die konkrete Qualifikation richtet sich nach Tätigkeit,
+Aufgabe und Verantwortungsbereich.
+</p>
+
+</div>
+
+
+<div class="standard-card">
+
+<div class="standard-tag">
+SAUBERKEIT
+</div>
+
+<h3>
+DIN EN 15780
+</h3>
+
+<p>
+<strong>
+Lüftung von Gebäuden –
+Luftleitungen – Sauberkeit von Lüftungsanlagen.
+</strong>
+</p>
+
+<p style="margin-top:12px;">
+Die Norm stellt einen wichtigen technischen Bezug zur
+Sauberkeit von Luftleitungen und Lüftungsanlagen dar
+und ergänzt die Betrachtung der technischen Reinigung.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="standard-note">
+
+<strong>Wichtiger Hinweis:</strong>
+Welche Normen, Richtlinien und technischen Anforderungen
+bei einer Reinigung konkret anzuwenden sind, hängt von
+der jeweiligen Anlage, Nutzung, Ausführung und Aufgabenstellung ab.
+Eine pauschale Anwendung sämtlicher Regelwerke ist daher nicht vorgesehen.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ÜBER UNS -->
+
+<section class="section-light" id="ueber-uns">
+
+<div class="container about-grid">
+
+<div class="about-text">
+
+<div class="section-label">
+Über uns
+</div>
+
+<h2 class="section-title">
+Technische Reinigung mit System.
+</h2>
+
+<p>
+KAANTEC steht für professionelle industrielle und technische
+Reinigungslösungen.
+</p>
+
+<p>
+Unser Fokus liegt auf technischen Anlagen, Produktionsbereichen,
+Lüftungs- und RLT-Systemen sowie anspruchsvollen technischen
+Anwendungen.
+</p>
+
+<p>
+Wir verbinden technisches Verständnis mit sorgfältiger und
+zuverlässiger Ausführung.
+</p>
+
+</div>
+
+
+<div class="dark-card">
+
+<h3>
+Unser Anspruch
+</h3>
+
+<ul class="dark-list">
+
+<li>Professionelle Ausführung</li>
+<li>Technisches Verständnis</li>
+<li>Zuverlässige Leistungen</li>
+<li>Saubere Dokumentation</li>
+<li>Individuelle Lösungen</li>
+<li>Transparente Kommunikation</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VORTEILE -->
+
+<section id="vorteile">
+
+<div class="container">
+
+<div class="section-label">
+Vorteile
+</div>
+
+<h2 class="section-title">
+Warum KAANTEC?
+</h2>
+
+<p class="section-intro">
+Technische Reinigung erfordert mehr als Sauberkeit.
+Entscheidend sind Verständnis für die Anlage,
+sorgfältige Ausführung und zuverlässige Kommunikation.
+</p>
+
+
+<div class="benefits-grid">
+
+
+<div class="benefit">
+<div class="benefit-icon">✓</div>
+<h3>Technisches Verständnis</h3>
+<p>
+Wir betrachten nicht nur die Oberfläche,
+sondern das technische System dahinter.
+</p>
+</div>
+
+
+<div class="benefit">
+<div class="benefit-icon">✓</div>
+<h3>Sorgfältige Ausführung</h3>
+<p>
+Reinigung mit Fokus auf Funktion,
+Hygiene und Werterhalt.
+</p>
+</div>
+
+
+<div class="benefit">
+<div class="benefit-icon">✓</div>
+<h3>Individuelle Lösungen</h3>
+<p>
+Jede Anlage und jeder Einsatzbereich
+kann unterschiedliche Anforderungen haben.
+</p>
+</div>
+
+
+<div class="benefit">
+<div class="benefit-icon">✓</div>
+<h3>Zuverlässigkeit</h3>
+<p>
+Klare Kommunikation, abgestimmte Termine
+und nachvollziehbare Abläufe.
+</p>
+</div>
+
+
+<div class="benefit">
+<div class="benefit-icon">✓</div>
+<h3>Dokumentation</h3>
+<p>
+Auf Wunsch können Reinigungsarbeiten
+nachvollziehbar dokumentiert werden.
+</p>
+</div>
+
+
+<div class="benefit">
+<div class="benefit-icon">✓</div>
+<h3>Region Stuttgart</h3>
+<p>
+Ansprechpartner für Unternehmen
+in Stuttgart und Umgebung.
+</p>
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABLAUF -->
+
+<section class="section-light" id="ablauf">
+
+<div class="container">
+
+<div class="section-label">
+Ablauf
+</div>
+
+<h2 class="section-title">
+Von der Anfrage bis zur Reinigung.
+</h2>
+
+<p class="section-intro">
+Ein klarer Ablauf schafft Transparenz und sorgt dafür,
+dass die Anforderungen Ihrer Anlage verstanden werden.
+</p>
+
+
+<div class="steps">
+
+
+<div class="step">
+<div class="step-number">1</div>
+<h3>Anfrage</h3>
+<p>
+Sie kontaktieren uns mit Ihrem Anliegen.
+</p>
+</div>
+
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>Beratung</h3>
+<p>
+Wir besprechen Anforderungen und Einsatzbereich.
+</p>
+</div>
+
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>Besichtigung</h3>
+<p>
+Bei Bedarf erfolgt eine Vor-Ort-Besichtigung.
+</p>
+</div>
+
+
+<div class="step">
+<div class="step-number">4</div>
+<h3>Reinigung</h3>
+<p>
+Durchführung der vereinbarten Arbeiten.
+</p>
+</div>
+
+
+<div class="step">
+<div class="step-number">5</div>
+<h3>Dokumentation</h3>
+<p>
+Auf Wunsch nachvollziehbare Dokumentation
+der ausgeführten Arbeiten.
+</p>
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section id="faq">
+
+<div class="container">
+
+<div class="section-label">
+FAQ
+</div>
+
+<h2 class="section-title">
+Häufige Fragen
+</h2>
+
+
+<div class="faq">
+
+
+<details>
+<summary>
+Welche Anlagen reinigen Sie?
+</summary>
+
+<p>
+Unser Schwerpunkt liegt auf technischen Anlagen,
+Lüftungs- und RLT-Systemen, Küchenabluft,
+VDK-Anlagen sowie industriellen und technischen Komponenten.
+</p>
+
+</details>
+
+
+<details>
+<summary>
+Arbeiten Sie auch für Unternehmen?
+</summary>
+
+<p>
+Ja. KAANTEC richtet sich insbesondere an gewerbliche
+und industrielle Kunden.
+</p>
+
+</details>
+
+
+<details>
+<summary>
+Kann ich zunächst eine unverbindliche Anfrage stellen?
+</summary>
+
+<p>
+Ja. Kontaktieren Sie uns telefonisch oder per E-Mail
+und schildern Sie kurz Ihr Anliegen.
+</p>
+
+</details>
+
+
+<details>
+<summary>
+In welcher Region sind Sie tätig?
+</summary>
+
+<p>
+Unser Schwerpunkt liegt in Stuttgart und Umgebung.
+</p>
+
+</details>
+
+
+<details>
+<summary>
+Welche Normen und Richtlinien sind bei der Reinigung relevant?
+</summary>
+
+<p>
+Das hängt von der jeweiligen Anlage und Aufgabenstellung ab.
+Für RLT-Anlagen können unter anderem die Richtlinienreihe
+VDI 6022 sowie VDI/ÖFR/SWKI 6022 Blatt 8 relevant sein.
+Bei gewerblichen Küchen und Küchenabluftanlagen ist insbesondere
+die Richtlinienreihe VDI 2052 zu berücksichtigen.
+</p>
+
+</details>
+
+
+<details>
+<summary>
+Sind die Vorher-/Nachher-Bilder echte Kundenprojekte?
+</summary>
+
+<p>
+Nein. Die auf dieser Website verwendeten Aufnahmen dienen
+ausschließlich als beispielhafte Visualisierungen typischer
+Reinigungsarbeiten und stellen keine konkreten Kundenprojekte dar.
+</p>
+
+</details>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- KONTAKT -->
+
+<section class="section-light" id="kontakt">
+
+<div class="container contact-grid">
+
+
+<div class="contact-info">
+
+<h3>
+Jetzt Anfrage stellen
+</h3>
+
+<p>
+Sie benötigen eine technische Reinigung?
+Kontaktieren Sie uns gerne.
+</p>
+
+
+<div class="contact-item">
+
+<strong>Telefon</strong>
+
+<a href="tel:+4917634680568">
+0176 34680568
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>E-Mail</strong>
+
+<a href="mailto:info@kaantec.de">
+info@kaantec.de
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>Adresse</strong>
+
+Schliffkopfstraße 5<br>
+70569 Stuttgart
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>Einsatzgebiet</strong>
+
+Stuttgart und Umgebung
+
+</div>
+
+</div>
+
+
+<form
+class="form"
+action="mailto:info@kaantec.de"
+method="post"
+enctype="text/plain"
+>
+
+<input
+type="text"
+name="Name"
+placeholder="Ihr Name *"
+required
+>
+
+<input
+type="email"
+name="E-Mail"
+placeholder="Ihre E-Mail-Adresse *"
+required
+>
+
+<input
+type="tel"
+name="Telefon"
+placeholder="Ihre Telefonnummer"
+>
+
+
+<select name="Leistung">
+
+<option value="">
+Welche Leistung benötigen Sie?
+</option>
+
+<option>
+RLT- / Lüftungsreinigung
+</option>
+
+<option>
+Küchenabluftreinigung
+</option>
+
+<option>
+VDK-Anlagen
+</option>
+
+<option>
+Industriereinigung
+</option>
+
+<option>
+Technische Reinigung
+</option>
+
+<option>
+Gebäudereinigung
+</option>
+
+<option>
+Andere Anfrage
+</option>
+
+</select>
+
+
+<textarea
+name="Nachricht"
+placeholder="Beschreiben Sie kurz Ihr Anliegen *"
+required
+></textarea>
+
+
+<label class="checkbox">
+
+<input
+type="checkbox"
+required
+>
+
+<span>
+Ich habe die Datenschutzerklärung gelesen und stimme
+der Verarbeitung meiner Angaben zur Bearbeitung meiner Anfrage zu.
+</span>
+
+</label>
+
+
+<button
+type="submit"
+class="btn btn-orange"
+>
+Anfrage senden
+</button>
+
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- IMPRESSUM -->
+
+<section id="impressum">
+
+<div class="container legal">
+
+<h1>
+Impressum
+</h1>
+
+<h2>
+Angaben gemäß § 5 DDG
+</h2>
+
+<p>
+
+<strong>KAANTEC</strong><br>
+
+Inhaber: Bilal Misirlioglu<br>
+
+Schliffkopfstraße 5<br>
+
+70569 Stuttgart<br>
+
+Deutschland
+
+</p>
+
+
+<h2>
+Kontakt
+</h2>
+
+<p>
+Telefon:
+<a href="tel:+4917634680568">
+0176 34680568
+</a>
+</p>
+
+<p>
+E-Mail:
+<a href="mailto:info@kaantec.de">
+info@kaantec.de
+</a>
+</p>
+
+
+<h2>
+Umsatzsteuer
+</h2>
+
+<p>
+Eine Umsatzsteuer-Identifikationsnummer wird nur angegeben,
+wenn eine solche tatsächlich vergeben wurde.
+</p>
+
+
+<h2>
+Verantwortlich für den Inhalt
+</h2>
+
+<p>
+Bilal Misirlioglu<br>
+Schliffkopfstraße 5<br>
+70569 Stuttgart
+</p>
+
+</div>
+
+</section>
+
+
+<!-- DATENSCHUTZ -->
+
+<section class="section-light" id="datenschutz">
+
+<div class="container legal">
+
+<h1>
+Datenschutzerklärung
+</h1>
+
+
+<h2>
+1. Verantwortlicher
+</h2>
+
+<p>
+KAANTEC<br>
+Inhaber: Bilal Misirlioglu<br>
+Schliffkopfstraße 5<br>
+70569 Stuttgart<br>
+Deutschland
+</p>
+
+<p>
+Telefon: 0176 34680568<br>
+E-Mail: info@kaantec.de
+</p>
+
+
+<h2>
+2. Verarbeitung personenbezogener Daten
+</h2>
+
+<p>
+Beim Besuch dieser Website können technisch notwendige Daten
+verarbeitet werden, die für die Bereitstellung und Sicherheit
+der Website erforderlich sind.
+</p>
+
+
+<h2>
+3. Kontaktaufnahme
+</h2>
+
+<p>
+Wenn Sie uns per E-Mail, Telefon oder über das Kontaktformular
+kontaktieren, verarbeiten wir die von Ihnen mitgeteilten Angaben
+zur Bearbeitung Ihrer Anfrage und zur Kommunikation mit Ihnen.
+</p>
+
+
+<h2>
+4. Rechtsgrundlage
+</h2>
+
+<p>
+Die Verarbeitung personenbezogener Daten erfolgt, soweit
+erforderlich, auf Grundlage der jeweils anwendbaren Vorschriften
+der Datenschutz-Grundverordnung (DSGVO).
+</p>
+
+
+<h2>
+5. Speicherdauer
+</h2>
+
+<p>
+Personenbezogene Daten werden nur so lange gespeichert,
+wie dies für den jeweiligen Zweck erforderlich ist oder
+gesetzliche Aufbewahrungspflichten bestehen.
+</p>
+
+
+<h2>
+6. Ihre Rechte
+</h2>
+
+<p>
+Sie haben im Rahmen der gesetzlichen Voraussetzungen insbesondere
+das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung
+der Verarbeitung und Widerspruch gegen bestimmte Verarbeitungen.
+</p>
+
+
+<h2>
+7. Externe Dienste
+</h2>
+
+<p>
+Auf dieser Website werden derzeit keine Analyse-, Werbe-
+oder Trackingdienste eingebunden.
+</p>
+
+<p>
+Sollten zukünftig externe Dienste eingebunden werden,
+muss diese Datenschutzerklärung entsprechend angepasst werden.
+</p>
+
+
+<h2>
+8. Kontakt zum Datenschutz
+</h2>
+
+<p>
+Bei Fragen zur Verarbeitung personenbezogener Daten können
+Sie uns über die oben genannte E-Mail-Adresse kontaktieren.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<div class="footer-logo">
+KAAN<span>TEC</span>
+</div>
+
+<p>
+Industrielle & technische Reinigung für Unternehmen
+in Stuttgart und Umgebung.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Leistungen
+</h3>
+
+<ul>
+
+<li>
+<a href="#leistungen">
+Abluftreinigung
+</a>
+</li>
+
+<li>
+<a href="#leistungen">
+Lüftungsreinigung
+</a>
+</li>
+
+<li>
+<a href="#leistungen">
+Küchenabluft
+</a>
+</li>
+
+<li>
+<a href="#leistungen">
+Industriereinigung
+</a>
+</li>
+
+<li>
+<a href="#leistungen">
+VDK-Anlagen
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>
+Kontakt
+</h3>
+
+<ul>
+
+<li>
+<a href="tel:+4917634680568">
+0176 34680568
+</a>
+</li>
+
+<li>
+<a href="mailto:info@kaantec.de">
+info@kaantec.de
+</a>
+</li>
+
+<li>
+Schliffkopfstraße 5
+</li>
+
+<li>
+70569 Stuttgart
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>
+Rechtliches
+</h3>
+
+<ul>
+
+<li>
+<a href="#normen">
+Normen & Richtlinien
+</a>
+</li>
+
+<li>
+<a href="#impressum">
+Impressum
+</a>
+</li>
+
+<li>
+<a href="#datenschutz">
+Datenschutzerklärung
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+<div>
+© 2026 KAANTEC – Alle Rechte vorbehalten.
+</div>
+
+<div>
+Technische & industrielle Reinigung
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList
+.toggle("active");
+
+}
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+link.addEventListener("click",function(){
+
+document
+.getElementById("navLinks")
+.classList
+.remove("active");
+
+});
+
+});
+
+</script>
+
+
 </body>
+
 </html>
