@@ -3,997 +3,2524 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="description" content="KAANTEC – industrielle und technische Reinigungs- und Serviceleistungen in der Region Stuttgart. Abluftreinigung, Brandschutz-Reinigung, Facility Management, Gebäude-Reinigung, Großküchenreinigung, Industriereinigung, Instandsetzungsarbeiten, Lüftungsreinigung, Maschinenwartung und Reinigung von VDK-Anlagen.">
+<meta name="robots" content="index, follow">
 <title>KAANTEC | Industrielle & Technische Reinigung</title>
 
-<meta name="description" content="KAANTEC – Industrielle und technische Reinigung in der Region Stuttgart. Abluftreinigung, Lüftungsreinigung, Industriereinigung, Brandschutz-Reinigung, Facility Management und technische Dienstleistungen.">
-
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root{
+  --blue:#173765;
+  --blue-dark:#102a4e;
+  --blue-light:#29486f;
+  --orange:#ff9700;
+  --orange-dark:#e88900;
+  --text:#17233b;
+  --muted:#657083;
+  --light:#f6f8fb;
+  --border:#dfe5ed;
+  --white:#fff;
 }
 
-html {
-    scroll-behavior: smooth;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #17233b;
-    background: #ffffff;
-    line-height: 1.6;
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.6;
 }
 
-.container {
-    width: min(1120px, 92%);
-    margin: 0 auto;
+a{
+  text-decoration:none;
+  color:inherit;
 }
 
-/* =========================
-   HEADER
-========================= */
+button,
+input,
+textarea,
+select{
+  font:inherit;
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid #e6e9ef;
+  backdrop-filter:blur(8px);
+}
+
+.navbar{
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:-1px;
+  color:var(--blue);
+}
+
+.logo span{
+  color:var(--orange);
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-size:15px;
+  font-weight:700;
+}
+
+.nav a{
+  transition:.2s;
+}
+
+.nav a:hover{
+  color:var(--orange);
+}
+
+.nav-button{
+  background:var(--orange);
+  color:#fff!important;
+  padding:12px 20px;
+  border-radius:7px;
+}
+
+.menu-btn{
+  display:none;
+  border:0;
+  background:transparent;
+  color:var(--blue);
+  font-size:27px;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(75,111,157,.42),
+      transparent 34%
+    ),
+    linear-gradient(135deg,#142b4e,#29466d);
+  color:#fff;
+  padding:105px 0 95px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  align-items:center;
+  gap:70px;
+}
+
+.badge{
+  display:inline-block;
+  border:1px solid rgba(255,255,255,.45);
+  border-radius:30px;
+  padding:8px 15px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.4px;
+  margin-bottom:25px;
+}
+
+.hero h1{
+  font-size:clamp(48px,6vw,76px);
+  line-height:.98;
+  letter-spacing:-3px;
+  margin-bottom:28px;
+}
+
+.hero h1 span{
+  color:var(--orange);
+}
+
+.hero-text{
+  max-width:680px;
+  font-size:18px;
+  color:#e7edf6;
+  margin-bottom:35px;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
+}
+
+.btn{
+  display:inline-block;
+  padding:15px 23px;
+  border-radius:7px;
+  font-weight:800;
+  font-size:15px;
+  transition:.2s;
+  border:0;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background:var(--orange);
+  color:#fff;
+}
+
+.btn-primary:hover{
+  background:var(--orange-dark);
+  transform:translateY(-1px);
+}
+
+.btn-secondary{
+  border:1px solid rgba(255,255,255,.55);
+  color:#fff;
+}
+
+.btn-secondary:hover{
+  background:rgba(255,255,255,.1);
+}
+
+.focus-box{
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:14px;
+  padding:32px;
+  backdrop-filter:blur(6px);
+}
+
+.focus-box h2{
+  font-size:24px;
+  margin-bottom:20px;
+}
+
+.focus-item{
+  display:flex;
+  gap:12px;
+  padding:13px 0;
+  border-bottom:1px solid rgba(255,255,255,.16);
+  font-weight:700;
+  font-size:14px;
+}
+
+.focus-item:last-child{
+  border-bottom:0;
+}
+
+.check{
+  color:var(--orange);
+  font-weight:900;
+}
+
+/* GENERAL */
+
+section{
+  padding:90px 0;
+}
+
+.section-label{
+  color:var(--orange);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.section-title{
+  font-size:clamp(34px,4vw,48px);
+  line-height:1.1;
+  color:var(--blue);
+  margin-bottom:18px;
+}
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255,255,255,0.97);
-    border-bottom: 1px solid #e6e9ef;
-    backdrop-filter: blur(8px);
+.section-intro{
+  max-width:780px;
+  color:#5b6677;
+  font-size:17px;
+  margin-bottom:45px;
 }
 
-.navbar {
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+.light-section{
+  background:var(--light);
 }
+
+/* SERVICES */
 
-.logo {
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: -1px;
-    color: #173765;
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
-.logo span {
-    color: #ff9700;
+.service-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:27px;
+  transition:.25s;
+  min-height:220px;
 }
 
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    font-size: 15px;
-    font-weight: 700;
+.service-card:hover{
+  transform:translateY(-4px);
+  border-color:var(--orange);
+  box-shadow:0 12px 30px rgba(23,55,101,.09);
 }
 
-.nav a {
-    transition: 0.2s;
+.service-number{
+  color:var(--orange);
+  font-size:12px;
+  font-weight:900;
+  margin-bottom:13px;
 }
 
-.nav a:hover {
-    color: #ff9700;
+.service-card h3{
+  color:var(--blue);
+  font-size:19px;
+  margin-bottom:10px;
 }
 
-.nav-button {
-    background: #ff9700;
-    color: #ffffff !important;
-    padding: 12px 20px;
-    border-radius: 7px;
+.service-card p{
+  color:var(--muted);
+  font-size:14px;
 }
 
-.nav-button:hover {
-    background: #e78600;
+.service-link{
+  display:inline-block;
+  margin-top:15px;
+  color:var(--blue);
+  font-weight:800;
+  font-size:13px;
 }
 
-/* =========================
-   HERO
-========================= */
+.service-link:hover{
+  color:var(--orange);
+}
 
-.hero {
-    background:
-        radial-gradient(circle at 80% 20%, rgba(72,104,150,0.45), transparent 35%),
-        linear-gradient(135deg, #142b4e, #29466d);
-    color: #ffffff;
-    padding: 105px 0 95px;
+.detail-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
 }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    align-items: center;
-    gap: 70px;
+.detail-card{
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:28px;
+  background:#fff;
 }
 
-.badge {
-    display: inline-block;
-    border: 1px solid rgba(255,255,255,0.45);
-    border-radius: 30px;
-    padding: 8px 15px;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.4px;
-    margin-bottom: 25px;
+.detail-card h3{
+  color:var(--blue);
+  font-size:21px;
+  margin-bottom:10px;
 }
 
-.hero h1 {
-    font-size: clamp(48px, 6vw, 76px);
-    line-height: 0.98;
-    letter-spacing: -3px;
-    margin-bottom: 28px;
+.detail-card p{
+  color:#5f6b7d;
+  font-size:15px;
 }
 
-.hero h1 span {
-    color: #ff9700;
+.detail-number{
+  color:var(--orange);
+  font-weight:900;
+  font-size:12px;
+  margin-bottom:8px;
 }
 
-.hero-text {
-    max-width: 680px;
-    font-size: 18px;
-    color: #e7edf6;
-    margin-bottom: 35px;
+/* ABOUT */
+
+.about{
+  background:#fff;
 }
 
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 13px;
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
 }
 
-.btn {
-    display: inline-block;
-    padding: 15px 23px;
-    border-radius: 7px;
-    font-weight: 800;
-    font-size: 15px;
-    transition: 0.2s;
+.about-text p{
+  color:#596579;
+  margin-bottom:17px;
 }
 
-.btn-primary {
-    background: #ff9700;
-    color: #ffffff;
+.about-box{
+  background:var(--blue);
+  color:#fff;
+  border-radius:12px;
+  padding:34px;
 }
 
-.btn-primary:hover {
-    background: #e78600;
-    transform: translateY(-1px);
+.about-box h3{
+  font-size:24px;
+  margin-bottom:20px;
 }
 
-.btn-secondary {
-    border: 1px solid rgba(255,255,255,0.55);
-    color: #ffffff;
+.about-point{
+  padding:12px 0;
+  border-bottom:1px solid rgba(255,255,255,.18);
+  font-weight:700;
+  font-size:14px;
 }
 
-.btn-secondary:hover {
-    background: rgba(255,255,255,0.1);
+.about-point:last-child{
+  border-bottom:0;
 }
+
+/* ADVANTAGES */
 
-/* Schwerpunkt-Box */
+.advantages-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
 
-.focus-box {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 14px;
-    padding: 32px;
-    backdrop-filter: blur(6px);
+.advantage{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:25px;
 }
 
-.focus-box h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.advantage-icon{
+  width:38px;
+  height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff1dc;
+  color:var(--orange);
+  border-radius:8px;
+  font-weight:900;
+  margin-bottom:18px;
 }
 
-.focus-item {
-    display: flex;
-    gap: 12px;
-    padding: 13px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.16);
-    font-weight: 700;
-    font-size: 14px;
+.advantage h3{
+  color:var(--blue);
+  font-size:17px;
+  margin-bottom:8px;
 }
 
-.focus-item:last-child {
-    border-bottom: none;
+.advantage p{
+  color:#667184;
+  font-size:14px;
 }
 
-.check {
-    color: #ff9700;
-    font-weight: 900;
+/* PROCESS */
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+.process-card{
+  padding:26px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:#fff;
+}
 
-section {
-    padding: 90px 0;
+.process-card .num{
+  color:var(--orange);
+  font-size:13px;
+  font-weight:900;
 }
 
-.section-label {
-    color: #ff9700;
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
+.process-card h3{
+  color:var(--blue);
+  margin:10px 0 8px;
 }
 
-.section-title {
-    font-size: clamp(34px, 4vw, 48px);
-    line-height: 1.1;
-    color: #173765;
-    margin-bottom: 18px;
+.process-card p{
+  font-size:14px;
+  color:var(--muted);
 }
 
-.section-intro {
-    max-width: 720px;
-    color: #5b6677;
-    font-size: 17px;
-    margin-bottom: 45px;
+/* FAQ */
+
+.faq{
+  background:var(--light);
 }
 
-/* =========================
-   LEISTUNGEN
-========================= */
+.faq-list{
+  max-width:900px;
+}
 
-.services-section {
-    background: #f7f9fc;
+details{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:9px;
+  margin-bottom:12px;
+  padding:0 20px;
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+summary{
+  cursor:pointer;
+  padding:18px 0;
+  font-weight:800;
+  color:var(--blue);
 }
 
-.service-card {
-    background: #ffffff;
-    border: 1px solid #e1e6ee;
-    border-radius: 10px;
-    padding: 27px;
-    transition: 0.25s;
-    min-height: 190px;
+details p{
+  padding:0 0 18px;
+  color:var(--muted);
+  font-size:15px;
 }
+
+/* CONTACT */
 
-.service-card:hover {
-    transform: translateY(-4px);
-    border-color: #ff9700;
-    box-shadow: 0 12px 30px rgba(23,55,101,0.09);
+.contact{
+  background:var(--blue);
+  color:#fff;
 }
 
-.service-number {
-    color: #ff9700;
-    font-size: 12px;
-    font-weight: 900;
-    margin-bottom: 13px;
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:start;
 }
 
-.service-card h3 {
-    color: #173765;
-    font-size: 19px;
-    margin-bottom: 10px;
+.contact .section-title{
+  color:#fff;
 }
 
-.service-card p {
-    color: #657083;
-    font-size: 14px;
+.contact-text{
+  color:#dbe4f0;
+  font-size:17px;
+  margin-bottom:25px;
 }
 
-/* =========================
-   ÜBER UNS
-========================= */
+.contact-list{
+  list-style:none;
+}
 
-.about {
-    background: #ffffff;
+.contact-list li{
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.16);
 }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    align-items: center;
+.contact-list li:last-child{
+  border-bottom:0;
 }
 
-.about-text p {
-    color: #596579;
-    margin-bottom: 17px;
+.contact-list strong{
+  display:block;
+  color:#aebbd0;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.7px;
 }
 
-.about-box {
-    background: #173765;
-    color: #ffffff;
-    border-radius: 12px;
-    padding: 34px;
+.contact-list a:hover{
+  color:var(--orange);
 }
 
-.about-box h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.contact-form{
+  background:#fff;
+  color:var(--text);
+  border-radius:12px;
+  padding:30px;
 }
 
-.about-point {
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.18);
-    font-weight: 700;
-    font-size: 14px;
+.contact-form h3{
+  color:var(--blue);
+  margin-bottom:18px;
+  font-size:24px;
 }
 
-.about-point:last-child {
-    border-bottom: none;
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
 }
 
-/* =========================
-   VORTEILE
-========================= */
+.field{
+  margin-bottom:15px;
+}
 
-.advantages {
-    background: #f7f9fc;
+.field label{
+  display:block;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:6px;
+  color:var(--blue);
 }
 
-.advantages-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+.field input,
+.field textarea,
+.field select{
+  width:100%;
+  border:1px solid #d7dde6;
+  border-radius:7px;
+  padding:12px 13px;
+  outline:none;
+  background:#fff;
 }
 
-.advantage {
-    background: #ffffff;
-    border: 1px solid #e1e6ee;
-    border-radius: 10px;
-    padding: 25px;
+.field input:focus,
+.field textarea:focus,
+.field select:focus{
+  border-color:var(--orange);
+  box-shadow:0 0 0 3px rgba(255,151,0,.12);
 }
 
-.advantage-icon {
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff1dc;
-    color: #ff9700;
-    border-radius: 8px;
-    font-weight: 900;
-    margin-bottom: 18px;
+.field textarea{
+  min-height:125px;
+  resize:vertical;
 }
 
-.advantage h3 {
-    color: #173765;
-    font-size: 17px;
-    margin-bottom: 8px;
+.form-note{
+  font-size:12px;
+  color:#707b8b;
+  margin-top:12px;
 }
 
-.advantage p {
-    color: #667184;
-    font-size: 14px;
+.form-note a{
+  color:var(--blue);
+  text-decoration:underline;
 }
 
-/* =========================
-   KONTAKT
-========================= */
+/* LEGAL */
 
-.contact {
-    background: #173765;
-    color: #ffffff;
+.legal{
+  background:#fff;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    align-items: center;
+.legal-card{
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:28px;
 }
 
-.contact .section-title {
-    color: #ffffff;
+.legal-card h3{
+  color:var(--blue);
+  font-size:22px;
+  margin-bottom:15px;
 }
 
-.contact-text {
-    color: #dbe4f0;
-    font-size: 17px;
-    margin-bottom: 28px;
+.legal-card h4{
+  color:var(--blue);
+  margin:20px 0 7px;
 }
 
-.contact-box {
-    background: #ffffff;
-    color: #17233b;
-    border-radius: 12px;
-    padding: 30px;
+.legal-card p,
+.legal-card li{
+  color:#5f6b7d;
+  font-size:14px;
+  margin-bottom:9px;
 }
 
-.contact-box h3 {
-    color: #173765;
-    margin-bottom: 18px;
+.legal-card ul{
+  padding-left:20px;
 }
 
-.contact-line {
-    padding: 12px 0;
-    border-bottom: 1px solid #e6e9ef;
+.placeholder{
+  background:#fff1dc;
+  border:1px solid #ffd28c;
+  border-radius:6px;
+  padding:8px 10px;
+  color:#7b5100;
+  font-weight:700;
+  display:inline-block;
 }
 
-.contact-line:last-child {
-    border-bottom: none;
+.warning{
+  background:#fff8ea;
+  border-left:4px solid var(--orange);
+  padding:15px 18px;
+  border-radius:6px;
+  margin:20px 0;
+  color:#6c4a0b;
+  font-size:14px;
 }
 
-.contact-label {
-    display: block;
-    color: #7a8493;
-    font-size: 12px;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 3px;
+/* FOOTER */
+
+footer{
+  background:#0d2039;
+  color:#aebbd0;
+  padding:30px 0;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.footer-content{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+  font-size:13px;
+}
 
-footer {
-    background: #10233f;
-    color: #aebbd0;
-    padding: 28px 0;
+.footer-logo{
+  color:#fff;
+  font-size:20px;
+  font-weight:900;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center;
-    font-size: 13px;
+.footer-logo span{
+  color:var(--orange);
 }
 
-.footer-logo {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 900;
+.footer-links{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
 }
 
-.footer-logo span {
-    color: #ff9700;
+.footer-links a:hover{
+  color:#fff;
 }
+
+/* MOBILE */
 
-/* =========================
-   MOBILE
-========================= */
+@media(max-width:900px){
 
-@media (max-width: 900px) {
+  .nav{
+    gap:15px;
+    font-size:13px;
+  }
 
-    .nav {
-        gap: 15px;
-        font-size: 13px;
-    }
+  .hero-grid,
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
 
-    .hero-grid,
-    .about-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+  .services-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .advantages-grid,
+  .process-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-    .advantages-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .detail-grid{
+    grid-template-columns:1fr;
+  }
 
-    .hero {
-        padding: 75px 0;
-    }
+  .hero{
+    padding:75px 0;
+  }
 
-    section {
-        padding: 70px 0;
-    }
+  section{
+    padding:70px 0;
+  }
 }
+
+@media(max-width:650px){
+
+  .navbar{
+    min-height:62px;
+  }
+
+  .logo{
+    font-size:23px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav{
+    display:none;
+    position:absolute;
+    top:62px;
+    left:0;
+    right:0;
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    padding:15px 4%;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+  }
+
+  .nav.open{
+    display:flex;
+  }
 
-@media (max-width: 650px) {
+  .nav a{
+    padding:12px 0;
+  }
 
-    .navbar {
-        min-height: 62px;
-    }
+  .nav-button{
+    text-align:center;
+    margin-top:5px;
+  }
 
-    .logo {
-        font-size: 23px;
-    }
+  .hero h1{
+    font-size:48px;
+    letter-spacing:-2px;
+  }
 
-    .nav {
-        display: none;
-    }
+  .hero-text{
+    font-size:16px;
+  }
 
-    .hero h1 {
-        font-size: 48px;
-        letter-spacing: -2px;
-    }
+  .services-grid,
+  .advantages-grid,
+  .process-grid{
+    grid-template-columns:1fr;
+  }
 
-    .hero-text {
-        font-size: 16px;
-    }
+  .detail-grid{
+    grid-template-columns:1fr;
+  }
 
-    .services-grid,
-    .advantages-grid {
-        grid-template-columns: 1fr;
-    }
+  .focus-box{
+    padding:24px;
+  }
 
-    .focus-box {
-        padding: 24px;
-    }
+  .form-row{
+    grid-template-columns:1fr;
+  }
 
-    .footer-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .footer-content{
+    flex-direction:column;
+    align-items:flex-start;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
-    <div class="container navbar">
+  <div class="container navbar">
 
-        <a href="#home" class="logo">
-            KAAN<span>TEC</span>
-        </a>
+    <a href="#home" class="logo">
+      KAAN<span>TEC</span>
+    </a>
 
-        <nav class="nav">
-            <a href="#leistungen">Leistungen</a>
-            <a href="#ueber-uns">Über uns</a>
-            <a href="#vorteile">Vorteile</a>
-            <a href="#kontakt">Kontakt</a>
-            <a href="#kontakt" class="nav-button">Anfrage stellen</a>
-        </nav>
+    <button
+      class="menu-btn"
+      type="button"
+      aria-label="Menü öffnen"
+      onclick="toggleMenu()">
+      ☰
+    </button>
 
-    </div>
+    <nav class="nav" id="mainNav">
+
+      <a href="#leistungen" onclick="closeMenu()">
+        Leistungen
+      </a>
+
+      <a href="#ueber-uns" onclick="closeMenu()">
+        Über uns
+      </a>
+
+      <a href="#vorteile" onclick="closeMenu()">
+        Vorteile
+      </a>
+
+      <a href="#ablauf" onclick="closeMenu()">
+        Ablauf
+      </a>
+
+      <a href="#kontakt" onclick="closeMenu()">
+        Kontakt
+      </a>
+
+      <a
+        href="#kontakt"
+        class="nav-button"
+        onclick="closeMenu()">
+        Anfrage stellen
+      </a>
+
+    </nav>
+  </div>
 </header>
-
-
-<!-- =========================
-     HERO
-========================= -->
 
 <main>
 
+<!-- HERO -->
+
 <section class="hero" id="home">
 
-    <div class="container hero-grid">
+  <div class="container hero-grid">
 
-        <div>
+    <div>
 
-            <div class="badge">
-                INDUSTRIAL & TECHNICAL CLEANING
-            </div>
+      <div class="badge">
+        INDUSTRIAL & TECHNICAL CLEANING
+      </div>
 
-            <h1>
-                Technische<br>
-                Reinigung.<br>
-                <span>Professionell<br>gelöst.</span>
-            </h1>
+      <h1>
+        Technische<br>
+        Reinigung.<br>
+        <span>
+          Professionell<br>
+          gelöst.
+        </span>
+      </h1>
 
-            <p class="hero-text">
-                KAANTEC steht für industrielle und technische
-                Reinigungs- und Serviceleistungen für Unternehmen
-                in der Region Stuttgart.
-            </p>
+      <p class="hero-text">
+        KAANTEC steht für industrielle und technische
+        Reinigungs- und Serviceleistungen für Unternehmen
+        in der Region Stuttgart.
+      </p>
 
-            <div class="hero-buttons">
-                <a href="#kontakt" class="btn btn-primary">
-                    Beratung anfragen
-                </a>
+      <div class="hero-buttons">
 
-                <a href="#leistungen" class="btn btn-secondary">
-                    Leistungen ansehen
-                </a>
-            </div>
+        <a
+          href="#kontakt"
+          class="btn btn-primary">
+          Beratung anfragen
+        </a>
 
-        </div>
+        <a
+          href="#leistungen"
+          class="btn btn-secondary">
+          Leistungen ansehen
+        </a>
 
-
-        <div class="focus-box">
-
-            <h2>Unsere Schwerpunkte</h2>
-
-            <div class="focus-item">
-                <span class="check">✓</span>
-                <span>Technische Anlagen</span>
-            </div>
-
-            <div class="focus-item">
-                <span class="check">✓</span>
-                <span>Industrie- und Anlagenreinigung</span>
-            </div>
-
-            <div class="focus-item">
-                <span class="check">✓</span>
-                <span>Lüftungs- und RLT-Systeme</span>
-            </div>
-
-            <div class="focus-item">
-                <span class="check">✓</span>
-                <span>Rohrleitungs- und technische Systeme</span>
-            </div>
-
-            <div class="focus-item">
-                <span class="check">✓</span>
-                <span>Individuelle Reinigungslösungen</span>
-            </div>
-
-        </div>
+      </div>
 
     </div>
+
+    <div class="focus-box">
+
+      <h2>
+        Unsere Schwerpunkte
+      </h2>
+
+      <div class="focus-item">
+        <span class="check">✓</span>
+        <span>Technische Anlagen</span>
+      </div>
+
+      <div class="focus-item">
+        <span class="check">✓</span>
+        <span>Industrie- und Anlagenreinigung</span>
+      </div>
+
+      <div class="focus-item">
+        <span class="check">✓</span>
+        <span>Lüftungs- und RLT-Systeme</span>
+      </div>
+
+      <div class="focus-item">
+        <span class="check">✓</span>
+        <span>Technische Serviceleistungen</span>
+      </div>
+
+      <div class="focus-item">
+        <span class="check">✓</span>
+        <span>Individuelle Reinigungslösungen</span>
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
-     LEISTUNGEN
-========================= -->
+<!-- LEISTUNGEN -->
 
-<section class="services-section" id="leistungen">
+<section
+  class="services-section light-section"
+  id="leistungen">
 
-    <div class="container">
+  <div class="container">
 
-        <div class="section-label">
-            Leistungen
+    <div class="section-label">
+      Leistungen
+    </div>
+
+    <h2 class="section-title">
+      Reinigung, die technische<br>
+      Systeme versteht.
+    </h2>
+
+    <p class="section-intro">
+      Wir konzentrieren uns auf anspruchsvolle industrielle,
+      technische und infrastrukturelle Anwendungen und
+      entwickeln Lösungen passend zu den jeweiligen
+      Anforderungen.
+    </p>
+
+
+    <div class="services-grid">
+
+
+      <div class="service-card">
+
+        <div class="service-number">
+          01
         </div>
 
-        <h2 class="section-title">
-            Reinigung, die technische<br>
-            Systeme versteht.
-        </h2>
+        <h3>
+          Abluftreinigung
+        </h3>
 
-        <p class="section-intro">
-            Wir konzentrieren uns auf anspruchsvolle industrielle,
-            technische und infrastrukturelle Anwendungen und
-            entwickeln Lösungen passend zu den jeweiligen Anforderungen.
+        <p>
+          Reinigung und Pflege von Abluftsystemen
+          und technischen Absauganlagen.
         </p>
 
+        <a
+          class="service-link"
+          href="#abluf">
+          Mehr erfahren →
+        </a>
 
-        <div class="services-grid">
+      </div>
 
-            <div class="service-card">
-                <div class="service-number">01</div>
-                <h3>Abluftreinigung</h3>
-                <p>
-                    Reinigung und Pflege von Abluftsystemen
-                    und technischen Absauganlagen.
-                </p>
-            </div>
 
-            <div class="service-card">
-                <div class="service-number">02</div>
-                <h3>Brandschutz-Reinigung</h3>
-                <p>
-                    Reinigung und Pflege brandschutzrelevanter
-                    technischer Komponenten und Bereiche.
-                </p>
-            </div>
+      <div class="service-card">
 
-            <div class="service-card">
-                <div class="service-number">03</div>
-                <h3>Facility Management</h3>
-                <p>
-                    Technische und infrastrukturelle
-                    Dienstleistungen rund um Gebäude und Anlagen.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-number">04</div>
-                <h3>Gebäude-Reinigung</h3>
-                <p>
-                    Professionelle Reinigung von gewerblich
-                    genutzten Gebäuden und Bereichen.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-number">05</div>
-                <h3>Großküchenreinigung</h3>
-                <p>
-                    Reinigung von Großküchen, Abluftbereichen
-                    und technischen Küchenanlagen.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-number">06</div>
-                <h3>Industriereinigung</h3>
-                <p>
-                    Reinigung von industriellen Bereichen,
-                    Anlagen und technischen Komponenten.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-number">07</div>
-                <h3>Instandsetzungsarbeiten</h3>
-                <p>
-                    Unterstützung bei technischen Arbeiten,
-                    Wartungsaufgaben und Instandhaltung.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-number">08</div>
-                <h3>Lüftungsreinigung</h3>
-                <p>
-                    Reinigung und technische Dienstleistungen
-                    rund um Lüftungs- und RLT-Anlagen.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-number">09</div>
-                <h3>Maschinenwartung</h3>
-                <p>
-                    Unterstützung bei Wartung, Pflege und
-                    technischen Servicearbeiten an Maschinen.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-number">10</div>
-                <h3>Reinigung von VDK-Anlagen</h3>
-                <p>
-                    Technische Reinigung und Pflege von
-                    VDK-Anlagen und deren Komponenten.
-                </p>
-            </div>
-
+        <div class="service-number">
+          02
         </div>
 
-    </div>
+        <h3>
+          Brandschutz-Reinigung
+        </h3>
 
-</section>
-
-
-<!-- =========================
-     ÜBER UNS
-========================= -->
-
-<section class="about" id="ueber-uns">
-
-    <div class="container about-grid">
-
-        <div class="about-text">
-
-            <div class="section-label">
-                Über uns
-            </div>
-
-            <h2 class="section-title">
-                Technische Reinigung<br>
-                mit System.
-            </h2>
-
-            <p>
-                KAANTEC steht für professionelle industrielle
-                und technische Reinigungsdienstleistungen.
-            </p>
-
-            <p>
-                Unser Fokus liegt auf technischen Anlagen,
-                Produktionsbereichen, Lüftungs- und RLT-Systemen
-                sowie anspruchsvollen industriellen Anwendungen.
-            </p>
-
-            <p>
-                Wir verbinden technisches Verständnis mit
-                sorgfältiger und zuverlässiger Ausführung.
-            </p>
-
-        </div>
-
-
-        <div class="about-box">
-
-            <h3>Unser Anspruch</h3>
-
-            <div class="about-point">
-                ✓ Professionelle Ausführung
-            </div>
-
-            <div class="about-point">
-                ✓ Technisches Verständnis
-            </div>
-
-            <div class="about-point">
-                ✓ Individuelle Lösungen
-            </div>
-
-            <div class="about-point">
-                ✓ Zuverlässige Abstimmung
-            </div>
-
-            <div class="about-point">
-                ✓ Saubere Ergebnisse
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     VORTEILE
-========================= -->
-
-<section class="advantages" id="vorteile">
-
-    <div class="container">
-
-        <div class="section-label">
-            Vorteile
-        </div>
-
-        <h2 class="section-title">
-            Warum KAANTEC?
-        </h2>
-
-        <p class="section-intro">
-            Technische Reinigung erfordert mehr als reine
-            Sauberkeit. Entscheidend sind Verständnis für
-            Anlagen, Prozesse und Anforderungen.
+        <p>
+          Reinigung und Pflege brandschutzrelevanter
+          technischer Bereiche und Komponenten.
         </p>
 
+        <a
+          class="service-link"
+          href="#brandschutz">
+          Mehr erfahren →
+        </a>
 
-        <div class="advantages-grid">
-
-            <div class="advantage">
-
-                <div class="advantage-icon">01</div>
-
-                <h3>Technischer Fokus</h3>
-
-                <p>
-                    Ausrichtung auf industrielle und technische
-                    Anwendungen.
-                </p>
-
-            </div>
+      </div>
 
 
-            <div class="advantage">
+      <div class="service-card">
 
-                <div class="advantage-icon">02</div>
-
-                <h3>Individuelle Lösungen</h3>
-
-                <p>
-                    Leistungen werden an die jeweiligen
-                    Anforderungen angepasst.
-                </p>
-
-            </div>
-
-
-            <div class="advantage">
-
-                <div class="advantage-icon">03</div>
-
-                <h3>Zuverlässigkeit</h3>
-
-                <p>
-                    Klare Abstimmung und professionelle
-                    Durchführung der vereinbarten Arbeiten.
-                </p>
-
-            </div>
-
-
-            <div class="advantage">
-
-                <div class="advantage-icon">04</div>
-
-                <h3>Region Stuttgart</h3>
-
-                <p>
-                    Dienstleistungen für Unternehmen in der
-                    Region Stuttgart und Umgebung.
-                </p>
-
-            </div>
-
+        <div class="service-number">
+          03
         </div>
 
+        <h3>
+          Facility Management
+        </h3>
+
+        <p>
+          Technische und infrastrukturelle Dienstleistungen
+          rund um Gebäude und Anlagen.
+        </p>
+
+        <a
+          class="service-link"
+          href="#facility">
+          Mehr erfahren →
+        </a>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-number">
+          04
+        </div>
+
+        <h3>
+          Gebäude-Reinigung
+        </h3>
+
+        <p>
+          Professionelle Reinigung von gewerblich
+          genutzten Gebäuden und Bereichen.
+        </p>
+
+        <a
+          class="service-link"
+          href="#gebaeude">
+          Mehr erfahren →
+        </a>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-number">
+          05
+        </div>
+
+        <h3>
+          Großküchenreinigung
+        </h3>
+
+        <p>
+          Reinigung von Großküchen, Abluftbereichen
+          und technischen Küchenanlagen.
+        </p>
+
+        <a
+          class="service-link"
+          href="#grosskueche">
+          Mehr erfahren →
+        </a>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-number">
+          06
+        </div>
+
+        <h3>
+          Industriereinigung
+        </h3>
+
+        <p>
+          Reinigung von industriellen Bereichen,
+          Anlagen und technischen Komponenten.
+        </p>
+
+        <a
+          class="service-link"
+          href="#industrie">
+          Mehr erfahren →
+        </a>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-number">
+          07
+        </div>
+
+        <h3>
+          Instandsetzungsarbeiten
+        </h3>
+
+        <p>
+          Unterstützung bei technischen Arbeiten,
+          Wartungsaufgaben und Instandhaltung.
+        </p>
+
+        <a
+          class="service-link"
+          href="#instandsetzung">
+          Mehr erfahren →
+        </a>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-number">
+          08
+        </div>
+
+        <h3>
+          Lüftungsreinigung
+        </h3>
+
+        <p>
+          Reinigung und technische Dienstleistungen
+          rund um Lüftungs- und RLT-Anlagen.
+        </p>
+
+        <a
+          class="service-link"
+          href="#lueftung">
+          Mehr erfahren →
+        </a>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-number">
+          09
+        </div>
+
+        <h3>
+          Maschinenwartung
+        </h3>
+
+        <p>
+          Unterstützung bei Wartung, Pflege und
+          technischen Servicearbeiten an Maschinen.
+        </p>
+
+        <a
+          class="service-link"
+          href="#maschinen">
+          Mehr erfahren →
+        </a>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-number">
+          10
+        </div>
+
+        <h3>
+          Reinigung von VDK-Anlagen
+        </h3>
+
+        <p>
+          Technische Reinigung und Pflege von
+          VDK-Anlagen und deren Komponenten.
+        </p>
+
+        <a
+          class="service-link"
+          href="#vdk">
+          Mehr erfahren →
+        </a>
+
+      </div>
+
     </div>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
-     KONTAKT
-========================= -->
+<!-- LEISTUNGSDETAILS -->
 
-<section class="contact" id="kontakt">
+<section id="leistungsdetails">
 
-    <div class="container contact-grid">
+  <div class="container">
 
-        <div>
+    <div class="section-label">
+      Unsere Leistungen im Detail
+    </div>
 
-            <div class="section-label">
-                Kontakt
-            </div>
+    <h2 class="section-title">
+      Passende Lösungen für<br>
+      technische Anforderungen.
+    </h2>
 
-            <h2 class="section-title">
-                Sie haben eine<br>
-                technische Aufgabe?
-            </h2>
+    <p class="section-intro">
+      Jede Leistung beginnt mit der Betrachtung der konkreten
+      Situation. Umfang und Ausführung werden an Anlage,
+      Bereich und Aufgabenstellung angepasst.
+    </p>
 
-            <p class="contact-text">
-                Sprechen Sie uns an. Wir prüfen Ihre Anforderungen
-                und besprechen gemeinsam eine passende Lösung.
-            </p>
 
-            <a href="mailto:info@kaantec.de" class="btn btn-primary">
-                Anfrage per E-Mail
-            </a>
+    <div class="detail-grid">
 
+
+      <div
+        class="detail-card"
+        id="abluf">
+
+        <div class="detail-number">
+          01
         </div>
 
+        <h3>
+          Abluftreinigung
+        </h3>
 
-        <div class="contact-box">
+        <p>
+          Reinigung von Abluft- und Absaugbereichen sowie
+          zugehörigen technischen Komponenten. Der genaue
+          Leistungsumfang wird an die jeweilige Anlage und
+          Aufgabenstellung angepasst.
+        </p>
 
-            <h3>KAANTEC</h3>
+      </div>
 
-            <div class="contact-line">
-                <span class="contact-label">E-Mail</span>
-                info@kaantec.de
-            </div>
 
-            <div class="contact-line">
-                <span class="contact-label">Region</span>
-                Stuttgart und Umgebung
-            </div>
+      <div
+        class="detail-card"
+        id="brandschutz">
 
-            <div class="contact-line">
-                <span class="contact-label">Leistungsbereich</span>
-                Industrielle & technische Dienstleistungen
-            </div>
-
+        <div class="detail-number">
+          02
         </div>
+
+        <h3>
+          Brandschutz-Reinigung
+        </h3>
+
+        <p>
+          Reinigung brandschutzrelevanter Bereiche und
+          technischer Komponenten. Die konkrete Leistung
+          wird anhand der örtlichen Gegebenheiten und
+          Anforderungen abgestimmt.
+        </p>
+
+      </div>
+
+
+      <div
+        class="detail-card"
+        id="facility">
+
+        <div class="detail-number">
+          03
+        </div>
+
+        <h3>
+          Facility Management
+        </h3>
+
+        <p>
+          Unterstützung bei technischen und infrastrukturellen
+          Aufgaben rund um Gebäude, Anlagen und
+          Betriebsbereiche.
+        </p>
+
+      </div>
+
+
+      <div
+        class="detail-card"
+        id="gebaeude">
+
+        <div class="detail-number">
+          04
+        </div>
+
+        <h3>
+          Gebäude-Reinigung
+        </h3>
+
+        <p>
+          Reinigung gewerblich genutzter Gebäude und
+          Bereiche – bedarfsgerecht und passend zur
+          jeweiligen Nutzung.
+        </p>
+
+      </div>
+
+
+      <div
+        class="detail-card"
+        id="grosskueche">
+
+        <div class="detail-number">
+          05
+        </div>
+
+        <h3>
+          Großküchenreinigung
+        </h3>
+
+        <p>
+          Reinigung von Großküchen und technischen
+          Küchenbereichen einschließlich relevanter
+          Abluft- und Arbeitsbereiche.
+        </p>
+
+      </div>
+
+
+      <div
+        class="detail-card"
+        id="industrie">
+
+        <div class="detail-number">
+          06
+        </div>
+
+        <h3>
+          Industriereinigung
+        </h3>
+
+        <p>
+          Reinigung industrieller Bereiche, Anlagen und
+          technischer Komponenten. Der Leistungsumfang
+          wird auf die jeweiligen betrieblichen Anforderungen
+          abgestimmt.
+        </p>
+
+      </div>
+
+
+      <div
+        class="detail-card"
+        id="instandsetzung">
+
+        <div class="detail-number">
+          07
+        </div>
+
+        <h3>
+          Instandsetzungsarbeiten
+        </h3>
+
+        <p>
+          Unterstützung bei ausgewählten technischen Arbeiten,
+          Wartungsaufgaben und Instandhaltungsmaßnahmen
+          im vereinbarten Leistungsumfang.
+        </p>
+
+      </div>
+
+
+      <div
+        class="detail-card"
+        id="lueftung">
+
+        <div class="detail-number">
+          08
+        </div>
+
+        <h3>
+          Lüftungsreinigung
+        </h3>
+
+        <p>
+          Reinigung und technische Dienstleistungen rund um
+          Lüftungs- und RLT-Anlagen. Die Ausführung erfolgt
+          passend zur jeweiligen Anlage und Aufgabenstellung.
+        </p>
+
+      </div>
+
+
+      <div
+        class="detail-card"
+        id="maschinen">
+
+        <div class="detail-number">
+          09
+        </div>
+
+        <h3>
+          Maschinenwartung
+        </h3>
+
+        <p>
+          Unterstützung bei Wartung, Pflege und technischen
+          Servicearbeiten an Maschinen und technischen
+          Komponenten.
+        </p>
+
+      </div>
+
+
+      <div
+        class="detail-card"
+        id="vdk">
+
+        <div class="detail-number">
+          10
+        </div>
+
+        <h3>
+          Reinigung von VDK-Anlagen
+        </h3>
+
+        <p>
+          Technische Reinigung und Pflege von VDK-Anlagen
+          und deren Komponenten entsprechend der jeweiligen
+          Aufgabenstellung.
+        </p>
+
+      </div>
 
     </div>
+
+  </div>
+
+</section>
+
+
+<!-- ÜBER UNS -->
+
+<section
+  class="about"
+  id="ueber-uns">
+
+  <div class="container about-grid">
+
+    <div class="about-text">
+
+      <div class="section-label">
+        Über uns
+      </div>
+
+      <h2 class="section-title">
+        Technische Reinigung<br>
+        mit System.
+      </h2>
+
+      <p>
+        KAANTEC steht für professionelle industrielle
+        und technische Reinigungsdienstleistungen.
+      </p>
+
+      <p>
+        Unser Fokus liegt auf technischen Anlagen,
+        Produktionsbereichen, Lüftungs- und RLT-Systemen
+        sowie anspruchsvollen industriellen Anwendungen.
+      </p>
+
+      <p>
+        Wir verbinden technisches Verständnis mit
+        sorgfältiger und zuverlässiger Ausführung.
+      </p>
+
+    </div>
+
+
+    <div class="about-box">
+
+      <h3>
+        Unser Anspruch
+      </h3>
+
+      <div class="about-point">
+        ✓ Professionelle Ausführung
+      </div>
+
+      <div class="about-point">
+        ✓ Technisches Verständnis
+      </div>
+
+      <div class="about-point">
+        ✓ Individuelle Lösungen
+      </div>
+
+      <div class="about-point">
+        ✓ Zuverlässige Abstimmung
+      </div>
+
+      <div class="about-point">
+        ✓ Saubere Ergebnisse
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VORTEILE -->
+
+<section
+  class="advantages light-section"
+  id="vorteile">
+
+  <div class="container">
+
+    <div class="section-label">
+      Vorteile
+    </div>
+
+    <h2 class="section-title">
+      Warum KAANTEC?
+    </h2>
+
+    <p class="section-intro">
+      Technische Reinigung erfordert mehr als reine Sauberkeit.
+      Entscheidend sind Verständnis für Anlagen, Prozesse
+      und Anforderungen.
+    </p>
+
+
+    <div class="advantages-grid">
+
+
+      <div class="advantage">
+
+        <div class="advantage-icon">
+          01
+        </div>
+
+        <h3>
+          Technischer Fokus
+        </h3>
+
+        <p>
+          Leistungen für technische Anlagen,
+          Systeme und industrielle Bereiche.
+        </p>
+
+      </div>
+
+
+      <div class="advantage">
+
+        <div class="advantage-icon">
+          02
+        </div>
+
+        <h3>
+          Individuelle Lösungen
+        </h3>
+
+        <p>
+          Der Leistungsumfang wird auf die konkrete
+          Aufgabenstellung abgestimmt.
+        </p>
+
+      </div>
+
+
+      <div class="advantage">
+
+        <div class="advantage-icon">
+          03
+        </div>
+
+        <h3>
+          Zuverlässige Abstimmung
+        </h3>
+
+        <p>
+          Klare Kommunikation und strukturierte
+          Abstimmung vor und während der Arbeiten.
+        </p>
+
+      </div>
+
+
+      <div class="advantage">
+
+        <div class="advantage-icon">
+          04
+        </div>
+
+        <h3>
+          Region Stuttgart
+        </h3>
+
+        <p>
+          Fokus auf Unternehmen und industrielle
+          Anwendungen in der Region Stuttgart.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABLAUF -->
+
+<section id="ablauf">
+
+  <div class="container">
+
+    <div class="section-label">
+      Ablauf
+    </div>
+
+    <h2 class="section-title">
+      Von der Anfrage<br>
+      zur passenden Lösung.
+    </h2>
+
+    <p class="section-intro">
+      Ein klarer Ablauf hilft dabei, Anforderungen und
+      Leistungsumfang von Anfang an sauber abzustimmen.
+    </p>
+
+
+    <div class="process-grid">
+
+
+      <div class="process-card">
+
+        <div class="num">
+          01
+        </div>
+
+        <h3>
+          Anfrage
+        </h3>
+
+        <p>
+          Sie beschreiben kurz die Aufgabe, Anlage
+          oder den zu reinigenden Bereich.
+        </p>
+
+      </div>
+
+
+      <div class="process-card">
+
+        <div class="num">
+          02
+        </div>
+
+        <h3>
+          Besprechung
+        </h3>
+
+        <p>
+          Wir klären die örtlichen und technischen
+          Anforderungen.
+        </p>
+
+      </div>
+
+
+      <div class="process-card">
+
+        <div class="num">
+          03
+        </div>
+
+        <h3>
+          Leistungsumfang
+        </h3>
+
+        <p>
+          Die gewünschte Leistung und der Umfang
+          werden gemeinsam abgestimmt.
+        </p>
+
+      </div>
+
+
+      <div class="process-card">
+
+        <div class="num">
+          04
+        </div>
+
+        <h3>
+          Ausführung
+        </h3>
+
+        <p>
+          Die vereinbarten Arbeiten werden sorgfältig
+          und zuverlässig durchgeführt.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section
+  class="faq"
+  id="faq">
+
+  <div class="container">
+
+    <div class="section-label">
+      FAQ
+    </div>
+
+    <h2 class="section-title">
+      Häufige Fragen.
+    </h2>
+
+
+    <div class="faq-list">
+
+
+      <details>
+
+        <summary>
+          Für welche Kunden bietet KAANTEC Leistungen an?
+        </summary>
+
+        <p>
+          Der Schwerpunkt liegt auf Unternehmen,
+          gewerblichen Bereichen, technischen Anlagen
+          und industriellen Anwendungen in der
+          Region Stuttgart.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Kann ich eine individuelle Anfrage stellen?
+        </summary>
+
+        <p>
+          Ja. Wenn Ihre Aufgabe nicht exakt einer der
+          aufgeführten Leistungen entspricht, können Sie
+          die Anforderungen direkt an KAANTEC senden.
+          Der konkrete Leistungsumfang wird anschließend
+          abgestimmt.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Gibt es eine Vor-Ort-Besichtigung?
+        </summary>
+
+        <p>
+          Ob eine Vor-Ort-Besichtigung sinnvoll oder
+          erforderlich ist, hängt von der jeweiligen Aufgabe
+          und den örtlichen Gegebenheiten ab.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Wie erhalte ich ein Angebot?
+        </summary>
+
+        <p>
+          Nutzen Sie den Kontaktbereich und beschreiben
+          Sie möglichst kurz Anlage, Bereich, gewünschte
+          Leistung und Ihren gewünschten Zeitraum.
+          Danach kann der weitere Ablauf abgestimmt werden.
+        </p>
+
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- KONTAKT -->
+
+<section
+  class="contact"
+  id="kontakt">
+
+  <div class="container contact-grid">
+
+
+    <div>
+
+      <div class="section-label">
+        Kontakt
+      </div>
+
+      <h2 class="section-title">
+        Sie haben eine<br>
+        technische Aufgabe?
+      </h2>
+
+      <p class="contact-text">
+        Schildern Sie uns kurz Ihre Anforderungen.
+        Wir klären gemeinsam, welche Leistung für
+        Ihre Situation sinnvoll ist.
+      </p>
+
+
+      <ul class="contact-list">
+
+        <li>
+
+          <strong>
+            E-Mail
+          </strong>
+
+          <a href="mailto:info@kaantec.de">
+            info@kaantec.de
+          </a>
+
+        </li>
+
+
+        <li>
+
+          <strong>
+            Website
+          </strong>
+
+          <a href="https://kaantec.de">
+            kaantec.de
+          </a>
+
+        </li>
+
+
+        <li>
+
+          <strong>
+            Region
+          </strong>
+
+          Stuttgart und Umgebung
+
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="contact-form">
+
+      <h3>
+        Anfrage stellen
+      </h3>
+
+
+      <form onsubmit="sendMail(event)">
+
+        <div class="form-row">
+
+          <div class="field">
+
+            <label for="name">
+              Name / Unternehmen
+            </label>
+
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required>
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="email">
+              E-Mail
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required>
+
+          </div>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="phone">
+            Telefon (optional)
+          </label>
+
+          <input
+            id="phone"
+            name="phone"
+            type="tel">
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="service">
+            Gewünschte Leistung
+          </label>
+
+          <select
+            id="service"
+            name="service">
+
+            <option>
+              Abluftreinigung
+            </option>
+
+            <option>
+              Brandschutz-Reinigung
+            </option>
+
+            <option>
+              Facility Management
+            </option>
+
+            <option>
+              Gebäude-Reinigung
+            </option>
+
+            <option>
+              Großküchenreinigung
+            </option>
+
+            <option>
+              Industriereinigung
+            </option>
+
+            <option>
+              Instandsetzungsarbeiten
+            </option>
+
+            <option>
+              Lüftungsreinigung
+            </option>
+
+            <option>
+              Maschinenwartung
+            </option>
+
+            <option>
+              Reinigung von VDK-Anlagen
+            </option>
+
+            <option>
+              Sonstige / individuelle Anfrage
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="message">
+            Ihre Nachricht
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="Kurz beschreiben: Anlage/Bereich, gewünschte Leistung, Ort und ggf. Zeitraum."></textarea>
+
+        </div>
+
+
+        <button
+          class="btn btn-primary"
+          type="submit">
+
+          Anfrage per E-Mail senden
+
+        </button>
+
+
+        <p class="form-note">
+
+          Beim Absenden wird Ihr E-Mail-Programm geöffnet.
+          Die Nachricht wird an info@kaantec.de vorbereitet.
+          Bitte beachten Sie auch unsere
+          <a href="#datenschutz">
+            Datenschutzerklärung
+          </a>.
+
+        </p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- IMPRESSUM -->
+
+<section
+  class="legal light-section"
+  id="impressum">
+
+  <div class="container">
+
+    <div class="section-label">
+      Rechtliches
+    </div>
+
+    <h2 class="section-title">
+      Impressum
+    </h2>
+
+
+    <div class="legal-card">
+
+      <div class="warning">
+
+        <strong>Wichtig:</strong>
+        Die markierten Angaben müssen vor der endgültigen
+        Veröffentlichung mit den tatsächlichen
+        Unternehmensdaten ergänzt werden.
+
+        Ich habe keine Adresse, Rechtsform, Inhaberdaten
+        oder Steuernummer erfunden.
+
+      </div>
+
+
+      <h3>
+        Angaben gemäß § 5 DDG
+      </h3>
+
+      <p>
+        <strong>
+          KAANTEC
+        </strong>
+      </p>
+
+
+      <p>
+        <span class="placeholder">
+          [Vollständiger Name / Firmenname eintragen]
+        </span>
+      </p>
+
+
+      <p>
+        <span class="placeholder">
+          [Straße und Hausnummer eintragen]
+        </span>
+      </p>
+
+
+      <p>
+        <span class="placeholder">
+          [PLZ und Ort eintragen]
+        </span>
+      </p>
+
+
+      <h4>
+        Vertretungsberechtigt / Inhaber
+      </h4>
+
+      <p>
+        <span class="placeholder">
+          [Vorname Nachname eintragen]
+        </span>
+      </p>
+
+
+      <h4>
+        Kontakt
+      </h4>
+
+      <p>
+        E-Mail:
+        <a href="mailto:info@kaantec.de">
+          info@kaantec.de
+        </a>
+      </p>
+
+
+      <p>
+        Telefon:
+        <span class="placeholder">
+          [Telefonnummer eintragen]
+        </span>
+      </p>
+
+
+      <h4>
+        Registereintrag
+      </h4>
+
+      <p>
+        <span class="placeholder">
+          [Nur falls vorhanden: Registergericht und Registernummer]
+        </span>
+      </p>
+
+
+      <h4>
+        Umsatzsteuer
+      </h4>
+
+      <p>
+        <span class="placeholder">
+          [Falls vorhanden: USt-IdNr. gemäß § 27a UStG]
+        </span>
+      </p>
+
+
+      <h4>
+        Verantwortlich für den Inhalt
+      </h4>
+
+      <p>
+        <span class="placeholder">
+          [Vorname Nachname und ladungsfähige Anschrift eintragen]
+        </span>
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DATENSCHUTZ -->
+
+<section
+  class="legal"
+  id="datenschutz">
+
+  <div class="container">
+
+    <div class="section-label">
+      Rechtliches
+    </div>
+
+    <h2 class="section-title">
+      Datenschutzerklärung
+    </h2>
+
+
+    <div class="legal-card">
+
+
+      <div class="warning">
+
+        <strong>Hinweis:</strong>
+        Diese Datenschutzerklärung ist auf die aktuell
+        eingebaute, bewusst einfache Website-Struktur
+        zugeschnitten.
+
+        Vor der endgültigen Veröffentlichung müssen die
+        Unternehmensdaten ergänzt und geprüft werden.
+
+        Wenn später Analyse-Tools, Karten, Videos,
+        externe Schriften, Social-Media-Plugins oder
+        andere Drittanbieter eingebaut werden, muss diese
+        Erklärung entsprechend erweitert werden.
+
+      </div>
+
+
+      <h3>
+        1. Verantwortlicher
+      </h3>
+
+      <p>
+        <strong>
+          KAANTEC
+        </strong>
+      </p>
+
+      <p>
+        <span class="placeholder">
+          [Vollständiger Name / Firmenname]
+        </span>
+      </p>
+
+      <p>
+        <span class="placeholder">
+          [Straße, Hausnummer, PLZ, Ort]
+        </span>
+      </p>
+
+      <p>
+        E-Mail:
+        <a href="mailto:info@kaantec.de">
+          info@kaantec.de
+        </a>
+      </p>
+
+
+      <h3>
+        2. Besuch der Website
+      </h3>
+
+      <p>
+        Beim Aufruf einer GitHub-Pages-Website wird nach
+        Angaben von GitHub die IP-Adresse des Besuchers
+        zu Sicherheitszwecken protokolliert und gespeichert.
+        Die technische Bereitstellung der Website erfolgt
+        über GitHub Pages.
+      </p>
+
+      <p>
+        Weitere Informationen zur Datenverarbeitung durch
+        GitHub finden Sie in der jeweils aktuellen
+        Datenschutzerklärung von GitHub.
+      </p>
+
+
+      <h3>
+        3. Kontaktaufnahme per E-Mail
+      </h3>
+
+      <p>
+        Wenn Sie KAANTEC per E-Mail kontaktieren, werden
+        die von Ihnen übermittelten Daten zur Bearbeitung
+        der Anfrage und zur Kommunikation mit Ihnen
+        verarbeitet.
+      </p>
+
+      <p>
+        Welche Daten dabei verarbeitet werden, hängt vom
+        Inhalt Ihrer Nachricht ab. Bitte übermitteln Sie
+        nur die Daten, die für Ihre Anfrage erforderlich sind.
+      </p>
+
+
+      <h3>
+        4. Kontaktformular auf dieser Website
+      </h3>
+
+      <p>
+        Das auf dieser Website angezeigte Anfrageformular
+        übermittelt Daten nicht an einen eigenen Server.
+
+        Beim Absenden wird das lokale E-Mail-Programm
+        des Besuchers geöffnet und eine E-Mail an
+        info@kaantec.de vorbereitet.
+      </p>
+
+      <p>
+        Die eigentliche Übertragung erfolgt anschließend
+        über den vom Besucher verwendeten E-Mail-Dienst.
+      </p>
+
+
+      <h3>
+        5. Cookies und Analyse
+      </h3>
+
+      <p>
+        Diese Version der Website verwendet keine eigenen
+        Analyse- oder Marketing-Tools und bindet keine
+        externen Tracking-Skripte ein.
+      </p>
+
+      <p>
+        Es kann jedoch technische Datenverarbeitung durch
+        den Hosting-Dienst stattfinden. Für GitHub Pages
+        gelten zusätzlich die Datenschutzinformationen
+        von GitHub.
+      </p>
+
+
+      <h3>
+        6. Ihre Rechte
+      </h3>
+
+      <p>
+        Betroffene Personen haben nach den gesetzlichen
+        Voraussetzungen insbesondere Rechte auf Auskunft,
+        Berichtigung, Löschung, Einschränkung der
+        Verarbeitung und Widerspruch.
+
+        Außerdem besteht ein Beschwerderecht bei einer
+        zuständigen Datenschutzaufsichtsbehörde.
+      </p>
+
+
+      <h3>
+        7. Aktualisierung
+      </h3>
+
+      <p>
+        Diese Datenschutzerklärung muss angepasst werden,
+        wenn sich die Website, die eingesetzten Dienste
+        oder die Art der Datenverarbeitung ändern.
+      </p>
+
+    </div>
+
+  </div>
 
 </section>
 
 </main>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
-    <div class="container footer-content">
+  <div class="container footer-content">
 
-        <div class="footer-logo">
-            KAAN<span>TEC</span>
-        </div>
+    <div>
 
-        <div>
-            © 2026 KAANTEC · Industrielle & Technische Reinigung
-        </div>
+      <div class="footer-logo">
+        KAAN<span>TEC</span>
+      </div>
+
+      <div>
+        Industrial & Technical Cleaning
+      </div>
 
     </div>
 
+
+    <div class="footer-links">
+
+      <a href="#leistungen">
+        Leistungen
+      </a>
+
+      <a href="#ueber-uns">
+        Über uns
+      </a>
+
+      <a href="#kontakt">
+        Kontakt
+      </a>
+
+      <a href="#impressum">
+        Impressum
+      </a>
+
+      <a href="#datenschutz">
+        Datenschutz
+      </a>
+
+    </div>
+
+  </div>
+
 </footer>
+
+
+<script>
+
+function toggleMenu(){
+
+  document
+    .getElementById('mainNav')
+    .classList
+    .toggle('open');
+
+}
+
+
+function closeMenu(){
+
+  document
+    .getElementById('mainNav')
+    .classList
+    .remove('open');
+
+}
+
+
+function sendMail(event){
+
+  event.preventDefault();
+
+
+  const name =
+    document
+      .getElementById('name')
+      .value
+      .trim();
+
+
+  const email =
+    document
+      .getElementById('email')
+      .value
+      .trim();
+
+
+  const phone =
+    document
+      .getElementById('phone')
+      .value
+      .trim();
+
+
+  const service =
+    document
+      .getElementById('service')
+      .value;
+
+
+  const message =
+    document
+      .getElementById('message')
+      .value
+      .trim();
+
+
+  const subject =
+    encodeURIComponent(
+      'Anfrage über KAANTEC – ' + service
+    );
+
+
+  const body =
+    encodeURIComponent(
+
+      'Name / Unternehmen: ' +
+      name +
+      '\n' +
+
+      'E-Mail: ' +
+      email +
+      '\n' +
+
+      'Telefon: ' +
+      (phone || 'nicht angegeben') +
+      '\n' +
+
+      'Gewünschte Leistung: ' +
+      service +
+      '\n\n' +
+
+      'Nachricht:\n' +
+      message
+
+    );
+
+
+  window.location.href =
+    'mailto:info@kaantec.de?subject=' +
+    subject +
+    '&body=' +
+    body;
+
+}
+
+</script>
 
 </body>
 </html>
