@@ -3,44 +3,6 @@
 
   <url>
     <loc>https://kaantec.de/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://kaantec.de/#leistungen</loc>
-  </url>
-
-  <url>
-    <loc>https://kaantec.de/#beispiele</loc>
-  </url>
-
-  <url>
-    <loc>https://kaantec.de/#ueber-uns</loc>
-  </url>
-
-  <url>
-    <loc>https://kaantec.de/#normen</loc>
-  </url>
-
-  <url>
-    <loc>https://kaantec.de/#ablauf</loc>
-  </url>
-
-  <url>
-    <loc>https://kaantec.de/#faq</loc>
-  </url>
-
-  <url>
-    <loc>https://kaantec.de/#kontakt</loc>
-  </url>
-
-  <url>
-    <loc>https://kaantec.de/#impressum</loc>
-  </url>
-
-  <url>
-    <loc>https://kaantec.de/#datenschutz</loc>
   </url>
 
 </urlset>
