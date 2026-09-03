@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>KAANTEC | Industrielle & technische Reinigung</title>
 
-<meta name="description"
-content="KAANTEC – professionelle industrielle und technische Reinigung in Stuttgart und Umgebung. RLT-Anlagen, Lüftungsreinigung, Küchenabluft, VDK-Anlagen und technische Reinigung.">
+<meta name="description" content="KAANTEC – professionelle industrielle und technische Reinigung in Stuttgart und Umgebung. RLT-Anlagen, Lüftungsreinigung, Küchenabluft, VDK-Anlagen und technische Reinigung.">
 
 <style>
-
 *{
 box-sizing:border-box;
 margin:0;
@@ -46,7 +43,6 @@ display:block
 --green:#68a91b;
 --light:#f5f7fa;
 --border:#dbe1e8;
---text:#596474
 }
 
 .container{
@@ -54,7 +50,9 @@ width:min(1180px,92%);
 margin:auto
 }
 
-/* NAVIGATION */
+/* =========================
+   HEADER
+========================= */
 
 header{
 position:sticky;
@@ -110,7 +108,9 @@ font-size:28px;
 cursor:pointer
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
 background:
@@ -216,7 +216,9 @@ font-weight:900;
 margin-right:12px
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
 padding:85px 0
@@ -242,17 +244,15 @@ color:var(--navy);
 margin-bottom:17px
 }
 
-.section-title span{
-color:var(--green)
-}
-
 .section-intro{
 max-width:760px;
 color:#606b7c;
 margin-bottom:42px
 }
 
-/* LEISTUNGEN */
+/* =========================
+   LEISTUNGEN
+========================= */
 
 .services-grid{
 display:grid;
@@ -291,21 +291,21 @@ color:#667083;
 font-size:14px
 }
 
-/* VORHER / NACHHER */
+/* =========================
+   BEISPIELARBEITEN
+========================= */
 
 .comparison{
 background:white;
 border:1px solid var(--border);
 border-radius:12px;
-overflow:hidden;
-max-width:1100px;
-margin:auto
+overflow:hidden
 }
 
 .comparison img{
 width:100%;
 height:auto;
-border-radius:10px
+display:block
 }
 
 .example-note{
@@ -317,66 +317,9 @@ color:#596474;
 font-size:13px
 }
 
-/* NORMEN */
-
-.standards-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px
-}
-
-.standard-card{
-background:white;
-border:1px solid var(--border);
-border-radius:12px;
-padding:28px;
-position:relative;
-transition:.2s
-}
-
-.standard-card:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 28px rgba(20,40,70,.08)
-}
-
-.standard-tag{
-display:inline-block;
-background:var(--navy);
-color:white;
-padding:5px 10px;
-border-radius:5px;
-font-size:11px;
-font-weight:800;
-margin-bottom:13px
-}
-
-.standard-card h3{
-color:var(--navy);
-font-size:20px;
-margin-bottom:10px
-}
-
-.standard-card p{
-color:#667083;
-font-size:14px
-}
-
-.standard-card strong{
-color:var(--navy)
-}
-
-.standard-note{
-margin-top:28px;
-padding:20px 22px;
-background:#fff;
-border:1px solid var(--border);
-border-left:4px solid var(--green);
-border-radius:8px;
-color:#596474;
-font-size:14px
-}
-
-/* ÜBER UNS */
+/* =========================
+   ÜBER UNS
+========================= */
 
 .about-grid{
 display:grid;
@@ -418,7 +361,9 @@ font-weight:900;
 margin-right:12px
 }
 
-/* VORTEILE */
+/* =========================
+   VORTEILE
+========================= */
 
 .benefits-grid{
 display:grid;
@@ -448,7 +393,67 @@ color:#667083;
 font-size:14px
 }
 
-/* ABLAUF */
+/* =========================
+   VDI / TECHNISCHE STANDARDS
+========================= */
+
+.standards-intro{
+max-width:780px;
+color:#606b7c;
+margin-bottom:40px
+}
+
+.standards-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px
+}
+
+.standard-card{
+background:white;
+border:1px solid var(--border);
+border-radius:12px;
+padding:28px;
+transition:.2s
+}
+
+.standard-card:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(20,40,70,.08)
+}
+
+.standard-number{
+display:inline-block;
+color:var(--orange);
+font-size:13px;
+font-weight:900;
+letter-spacing:.5px;
+margin-bottom:10px
+}
+
+.standard-card h3{
+color:var(--navy);
+font-size:20px;
+margin-bottom:10px
+}
+
+.standard-card p{
+color:#667083;
+font-size:14px
+}
+
+.standard-note{
+margin-top:28px;
+padding:18px 20px;
+background:#fff;
+border-left:4px solid var(--green);
+color:#596474;
+font-size:13px
+}
+
+/* =========================
+   ABLAUF
+========================= */
 
 .steps{
 display:grid;
@@ -487,7 +492,9 @@ font-size:13px;
 color:#667083
 }
 
-/* FAQ */
+/* =========================
+   FAQ
+========================= */
 
 .faq{
 max-width:850px;
@@ -510,7 +517,9 @@ padding-top:12px;
 color:#667083
 }
 
-/* KONTAKT */
+/* =========================
+   KONTAKT
+========================= */
 
 .contact-grid{
 display:grid;
@@ -573,7 +582,9 @@ width:auto;
 margin-top:5px
 }
 
-/* RECHTLICHES */
+/* =========================
+   RECHTLICHES
+========================= */
 
 .legal{
 max-width:900px;
@@ -596,7 +607,9 @@ color:#596474;
 margin-bottom:13px
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 background:var(--navy-dark);
@@ -654,40 +667,11 @@ gap:20px;
 flex-wrap:wrap
 }
 
-/* MOBILE */
+/* =========================
+   RESPONSIVE
+========================= */
 
-@media(max-width:1000px){
-
-.nav-links{
-gap:14px;
-font-size:13px
-}
-
-.hero-grid,
-.about-grid,
-.contact-grid{
-grid-template-columns:1fr
-}
-
-.services-grid{
-grid-template-columns:repeat(2,1fr)
-}
-
-.benefits-grid{
-grid-template-columns:repeat(2,1fr)
-}
-
-.steps{
-grid-template-columns:repeat(2,1fr)
-}
-
-.footer-grid{
-grid-template-columns:repeat(2,1fr)
-}
-
-}
-
-@media(max-width:800px){
+@media(max-width:900px){
 
 .nav-links{
 display:none;
@@ -710,8 +694,30 @@ display:flex
 display:block
 }
 
+.hero-grid,
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr
+}
+
+.services-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.benefits-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
 .standards-grid{
 grid-template-columns:1fr
+}
+
+.steps{
+grid-template-columns:repeat(2,1fr)
+}
+
+.footer-grid{
+grid-template-columns:repeat(2,1fr)
 }
 
 }
@@ -720,11 +726,6 @@ grid-template-columns:1fr
 
 section{
 padding:65px 0
-}
-
-.hero{
-min-height:auto;
-padding:70px 0
 }
 
 .hero h1{
@@ -742,25 +743,15 @@ grid-template-columns:1fr
 min-height:64px
 }
 
-.nav-links{
-top:64px
 }
-
-.comparison{
-border-radius:8px
-}
-
-.standard-card{
-padding:23px
-}
-
-}
-
 </style>
 </head>
 
-
 <body>
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -770,18 +761,28 @@ padding:23px
 KAAN<span>TEC</span>
 </a>
 
-<button class="menu-button" onclick="toggleMenu()">☰</button>
+<button class="menu-button" onclick="toggleMenu()">
+☰
+</button>
 
 <nav class="nav-links" id="navLinks">
 
 <a href="#start">Startseite</a>
+
 <a href="#leistungen">Leistungen</a>
+
 <a href="#referenzen">Beispiele</a>
-<a href="#normen">Normen</a>
+
 <a href="#ueber-uns">Über uns</a>
+
 <a href="#vorteile">Vorteile</a>
+
+<a href="#standards">Standards</a>
+
 <a href="#ablauf">Ablauf</a>
+
 <a href="#faq">FAQ</a>
+
 <a href="#kontakt">Kontakt</a>
 
 <a href="#kontakt" class="nav-button">
@@ -795,7 +796,9 @@ Anfrage stellen
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="start">
 
@@ -810,12 +813,16 @@ INDUSTRIAL & TECHNICAL CLEANING
 <h1>
 Technische<br>
 Reinigung.<br>
-<span>Professionell<br>gelöst.</span>
+<span>
+Professionell<br>
+gelöst.
+</span>
 </h1>
 
 <p>
-KAANTEC steht für industrielle und technische Reinigungslösungen
-für Unternehmen in Stuttgart und Umgebung.
+KAANTEC steht für industrielle und technische
+Reinigungslösungen für Unternehmen in Stuttgart
+und Umgebung.
 </p>
 
 <div class="buttons">
@@ -842,10 +849,15 @@ Unsere Schwerpunkte
 <ul class="hero-list">
 
 <li>Technische Anlagen</li>
+
 <li>Industrie- und Anlagenreinigung</li>
+
 <li>Lüftungs- und RLT-Systeme</li>
+
 <li>Küchenabluftreinigung</li>
+
 <li>VDK-Anlagen</li>
+
 <li>Individuelle Reinigungslösungen</li>
 
 </ul>
@@ -857,7 +869,9 @@ Unsere Schwerpunkte
 </section>
 
 
-<!-- LEISTUNGEN -->
+<!-- =========================
+     LEISTUNGEN
+========================= -->
 
 <section class="section-light" id="leistungen">
 
@@ -873,92 +887,194 @@ Reinigung, die technische Systeme versteht.
 
 <p class="section-intro">
 Wir konzentrieren uns auf anspruchsvolle industrielle,
-technische und infrastrukturelle Anwendungen und entwickeln
-Lösungen passend zu den jeweiligen Anforderungen.
+technische und infrastrukturelle Anwendungen und
+entwickeln Lösungen passend zu den jeweiligen
+Anforderungen.
 </p>
 
 
 <div class="services-grid">
 
-<div class="service-card">
-<div class="service-number">01</div>
-<h3>Abluftreinigung</h3>
-<p>
-Reinigung von Abluftsystemen, Kanälen und technischen Komponenten.
-</p>
-</div>
 
 <div class="service-card">
-<div class="service-number">02</div>
-<h3>Brandschutz-Hygiene</h3>
-<p>
-Reinigung und hygienische Pflege technischer Systeme.
-</p>
+
+<div class="service-number">
+01
 </div>
 
-<div class="service-card">
-<div class="service-number">03</div>
-<h3>Facility Management</h3>
+<h3>
+Abluftreinigung
+</h3>
+
 <p>
-Technische Dienstleistungen und Unterstützung im Gebäudebetrieb.
+Reinigung von Abluftsystemen, Kanälen und
+technischen Komponenten.
 </p>
+
 </div>
 
-<div class="service-card">
-<div class="service-number">04</div>
-<h3>Gebäudereinigung</h3>
-<p>
-Professionelle Reinigung von gewerblich genutzten Gebäuden.
-</p>
-</div>
 
 <div class="service-card">
-<div class="service-number">05</div>
-<h3>Großküchenreinigung</h3>
-<p>
-Reinigung von Küchenabluft, Abzugshauben und technischen Bereichen.
-</p>
+
+<div class="service-number">
+02
 </div>
 
-<div class="service-card">
-<div class="service-number">06</div>
-<h3>Industriereinigung</h3>
+<h3>
+Brandschutz-Hygiene
+</h3>
+
 <p>
-Reinigung industrieller Bereiche, Anlagen und technischer Komponenten.
+Reinigung und hygienische Pflege technischer
+Systeme.
 </p>
+
 </div>
 
-<div class="service-card">
-<div class="service-number">07</div>
-<h3>Instandhaltungsarbeiten</h3>
-<p>
-Unterstützende Arbeiten bei technischen Anlagen und Betriebseinrichtungen.
-</p>
-</div>
 
 <div class="service-card">
-<div class="service-number">08</div>
-<h3>Lüftungsreinigung</h3>
-<p>
-Reinigung und technische Dienstleistungen rund um Lüftungs- und RLT-Anlagen.
-</p>
+
+<div class="service-number">
+03
 </div>
 
-<div class="service-card">
-<div class="service-number">09</div>
-<h3>Maschinenwartung</h3>
+<h3>
+Facility Management
+</h3>
+
 <p>
-Unterstützende Wartungs- und Reinigungsleistungen für technische Anlagen.
+Technische Dienstleistungen und Unterstützung
+im Gebäudebetrieb.
 </p>
+
 </div>
 
+
 <div class="service-card">
-<div class="service-number">10</div>
-<h3>Reinigung von VDK-Anlagen</h3>
-<p>
-Technische Reinigung von VDK-Anlagen und deren Komponenten.
-</p>
+
+<div class="service-number">
+04
 </div>
+
+<h3>
+Gebäudereinigung
+</h3>
+
+<p>
+Professionelle Reinigung von gewerblich
+genutzten Gebäuden.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+05
+</div>
+
+<h3>
+Großküchenreinigung
+</h3>
+
+<p>
+Reinigung von Küchenabluft, Abzugshauben
+und technischen Bereichen.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+06
+</div>
+
+<h3>
+Industriereinigung
+</h3>
+
+<p>
+Reinigung industrieller Bereiche, Anlagen
+und technischer Komponenten.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+07
+</div>
+
+<h3>
+Instandhaltungsarbeiten
+</h3>
+
+<p>
+Unterstützende Arbeiten bei technischen Anlagen
+und Betriebseinrichtungen.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+08
+</div>
+
+<h3>
+Lüftungsreinigung
+</h3>
+
+<p>
+Reinigung und technische Dienstleistungen
+rund um Lüftungs- und RLT-Anlagen.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+09
+</div>
+
+<h3>
+Maschinenwartung
+</h3>
+
+<p>
+Unterstützende Wartungs- und Reinigungsleistungen
+für technische Anlagen.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+10
+</div>
+
+<h3>
+Reinigung von VDK-Anlagen
+</h3>
+
+<p>
+Technische Reinigung von VDK-Anlagen
+und deren Komponenten.
+</p>
+
+</div>
+
 
 </div>
 
@@ -967,7 +1083,9 @@ Technische Reinigung von VDK-Anlagen und deren Komponenten.
 </section>
 
 
-<!-- BEISPIELARBEITEN -->
+<!-- =========================
+     BEISPIELARBEITEN
+========================= -->
 
 <section id="referenzen">
 
@@ -978,20 +1096,21 @@ Beispielarbeiten
 </div>
 
 <h2 class="section-title">
-Vorher – <span>Nachher</span>
+Vorher – <span style="color:#68a91b;">Nachher</span>
 </h2>
 
 <p class="section-intro">
-Beispielhafte Visualisierungen typischer Reinigungsarbeiten.
-Die Bilder dienen ausschließlich zur Veranschaulichung und stellen
+Beispielhafte Visualisierungen typischer
+Reinigungsarbeiten. Die Darstellungen dienen
+ausschließlich zur Veranschaulichung und stellen
 keine konkreten Kundenprojekte dar.
 </p>
 
 <div class="comparison">
 
 <img
-src="/vorher-nachher-beispiele.png"
-alt="Vorher-Nachher-Beispiele für RLT-Anlagen, Industrie-Küchenabluft, Abzugshauben und VDK-Anlagen"
+src="vorher-nachher-beispiele.png"
+alt="Beispielhafte Vorher-Nachher-Darstellungen von RLT-Anlagen, Küchenabluft, Abzugshauben und VDK-Anlagen"
 >
 
 </div>
@@ -999,9 +1118,9 @@ alt="Vorher-Nachher-Beispiele für RLT-Anlagen, Industrie-Küchenabluft, Abzugsh
 <div class="example-note">
 
 <strong>Hinweis:</strong>
-Die dargestellten Vorher-Nachher-Aufnahmen dienen ausschließlich
-der Veranschaulichung typischer Reinigungsarbeiten und stellen
-keine konkreten Kundenprojekte dar.
+Die dargestellten Vorher-/Nachher-Aufnahmen sind
+Beispielvisualisierungen und keine echten
+Kundenreferenzen.
 
 </div>
 
@@ -1010,204 +1129,9 @@ keine konkreten Kundenprojekte dar.
 </section>
 
 
-<!-- NORMEN -->
-
-<section class="section-light" id="normen">
-
-<div class="container">
-
-<div class="section-label">
-Normen & Richtlinien
-</div>
-
-<h2 class="section-title">
-Technische Reinigung nach relevanten Regelwerken.
-</h2>
-
-<p class="section-intro">
-Je nach Anlage, Nutzung und Aufgabenstellung können unterschiedliche
-technische Regeln und Richtlinien relevant sein. Die nachfolgenden
-Regelwerke bilden wichtige fachliche Grundlagen für die jeweiligen
-Anwendungsbereiche.
-</p>
-
-
-<div class="standards-grid">
-
-
-<div class="standard-card">
-
-<div class="standard-tag">
-RLT / HYGIENE
-</div>
-
-<h3>
-VDI 6022 Blatt 1
-</h3>
-
-<p>
-<strong>Raumlufttechnik, Raumluftqualität –
-Hygieneanforderungen an raumlufttechnische Anlagen und Geräte.</strong>
-</p>
-
-<p style="margin-top:12px;">
-Die Richtlinienreihe VDI 6022 behandelt die Hygiene von
-RLT-Anlagen und Geräten und bildet eine wichtige Grundlage
-für den hygienischen Betrieb entsprechender Anlagen.
-</p>
-
-</div>
-
-
-<div class="standard-card">
-
-<div class="standard-tag">
-RLT / REINIGUNG
-</div>
-
-<h3>
-VDI/ÖFR/SWKI 6022 Blatt 8
-</h3>
-
-<p>
-<strong>
-Reinigung von RLT-Anlagen und Luftleitungen.
-</strong>
-</p>
-
-<p style="margin-top:12px;">
-Die Richtlinie behandelt Reinigungskonzepte,
-Reinigungsverfahren und Reinigungsprozesse für
-RLT-Anlagen, Luftleitungen sowie zentrale und dezentrale
-Komponenten.
-</p>
-
-</div>
-
-
-<div class="standard-card">
-
-<div class="standard-tag">
-KÜCHENLÜFTUNG
-</div>
-
-<h3>
-VDI 2052 Blatt 1
-</h3>
-
-<p>
-<strong>
-Raumlufttechnik – Küchen.
-</strong>
-</p>
-
-<p style="margin-top:12px;">
-Diese Richtlinie behandelt unter anderem die Planung,
-Dimensionierung und den Aufbau von raumlufttechnischen
-Anlagen in gewerblichen Küchen.
-</p>
-
-</div>
-
-
-<div class="standard-card">
-
-<div class="standard-tag">
-KÜCHENABLUFT / REINIGUNG
-</div>
-
-<h3>
-VDI 2052 Blatt 2
-</h3>
-
-<p>
-<strong>
-Raumlufttechnik – Küchen –
-Reinigung von Abluftanlagen.
-</strong>
-</p>
-
-<p style="margin-top:12px;">
-Die Richtlinie behandelt die Reinigung von Abluftanlagen
-in gewerblichen Küchen und berücksichtigt dabei unter
-anderem Brandschutz, Hygiene, Energieeinsparung und Arbeitsschutz.
-</p>
-
-</div>
-
-
-<div class="standard-card">
-
-<div class="standard-tag">
-QUALIFIKATION
-</div>
-
-<h3>
-VDI-MT / 6022 Blatt 8.1
-</h3>
-
-<p>
-<strong>
-Qualifizierung von Personal für die Reinigung
-von RLT-Anlagen und Luftleitungen.
-</strong>
-</p>
-
-<p style="margin-top:12px;">
-Für bestimmte Tätigkeiten und Verantwortlichkeiten können
-entsprechende Qualifikationsanforderungen relevant sein.
-Die konkrete Qualifikation richtet sich nach Tätigkeit,
-Aufgabe und Verantwortungsbereich.
-</p>
-
-</div>
-
-
-<div class="standard-card">
-
-<div class="standard-tag">
-SAUBERKEIT
-</div>
-
-<h3>
-DIN EN 15780
-</h3>
-
-<p>
-<strong>
-Lüftung von Gebäuden –
-Luftleitungen – Sauberkeit von Lüftungsanlagen.
-</strong>
-</p>
-
-<p style="margin-top:12px;">
-Die Norm stellt einen wichtigen technischen Bezug zur
-Sauberkeit von Luftleitungen und Lüftungsanlagen dar
-und ergänzt die Betrachtung der technischen Reinigung.
-</p>
-
-</div>
-
-
-</div>
-
-
-<div class="standard-note">
-
-<strong>Wichtiger Hinweis:</strong>
-Welche Normen, Richtlinien und technischen Anforderungen
-bei einer Reinigung konkret anzuwenden sind, hängt von
-der jeweiligen Anlage, Nutzung, Ausführung und Aufgabenstellung ab.
-Eine pauschale Anwendung sämtlicher Regelwerke ist daher nicht vorgesehen.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ÜBER UNS -->
+<!-- =========================
+     ÜBER UNS
+========================= -->
 
 <section class="section-light" id="ueber-uns">
 
@@ -1224,19 +1148,19 @@ Technische Reinigung mit System.
 </h2>
 
 <p>
-KAANTEC steht für professionelle industrielle und technische
-Reinigungslösungen.
+KAANTEC steht für professionelle industrielle
+und technische Reinigungslösungen.
 </p>
 
 <p>
-Unser Fokus liegt auf technischen Anlagen, Produktionsbereichen,
-Lüftungs- und RLT-Systemen sowie anspruchsvollen technischen
-Anwendungen.
+Unser Fokus liegt auf technischen Anlagen,
+Produktionsbereichen, Lüftungs- und RLT-Systemen
+sowie anspruchsvollen technischen Anwendungen.
 </p>
 
 <p>
-Wir verbinden technisches Verständnis mit sorgfältiger und
-zuverlässiger Ausführung.
+Wir verbinden technisches Verständnis mit
+sorgfältiger und zuverlässiger Ausführung.
 </p>
 
 </div>
@@ -1250,12 +1174,29 @@ Unser Anspruch
 
 <ul class="dark-list">
 
-<li>Professionelle Ausführung</li>
-<li>Technisches Verständnis</li>
-<li>Zuverlässige Leistungen</li>
-<li>Saubere Dokumentation</li>
-<li>Individuelle Lösungen</li>
-<li>Transparente Kommunikation</li>
+<li>
+Professionelle Ausführung
+</li>
+
+<li>
+Technisches Verständnis
+</li>
+
+<li>
+Zuverlässige Leistungen
+</li>
+
+<li>
+Saubere Dokumentation
+</li>
+
+<li>
+Individuelle Lösungen
+</li>
+
+<li>
+Transparente Kommunikation
+</li>
 
 </ul>
 
@@ -1266,7 +1207,9 @@ Unser Anspruch
 </section>
 
 
-<!-- VORTEILE -->
+<!-- =========================
+     VORTEILE
+========================= -->
 
 <section id="vorteile">
 
@@ -1291,62 +1234,110 @@ sorgfältige Ausführung und zuverlässige Kommunikation.
 
 
 <div class="benefit">
-<div class="benefit-icon">✓</div>
-<h3>Technisches Verständnis</h3>
+
+<div class="benefit-icon">
+✓
+</div>
+
+<h3>
+Technisches Verständnis
+</h3>
+
 <p>
 Wir betrachten nicht nur die Oberfläche,
 sondern das technische System dahinter.
 </p>
+
 </div>
 
 
 <div class="benefit">
-<div class="benefit-icon">✓</div>
-<h3>Sorgfältige Ausführung</h3>
+
+<div class="benefit-icon">
+✓
+</div>
+
+<h3>
+Sorgfältige Ausführung
+</h3>
+
 <p>
 Reinigung mit Fokus auf Funktion,
 Hygiene und Werterhalt.
 </p>
+
 </div>
 
 
 <div class="benefit">
-<div class="benefit-icon">✓</div>
-<h3>Individuelle Lösungen</h3>
+
+<div class="benefit-icon">
+✓
+</div>
+
+<h3>
+Individuelle Lösungen
+</h3>
+
 <p>
-Jede Anlage und jeder Einsatzbereich
-kann unterschiedliche Anforderungen haben.
+Jede Anlage und jeder Einsatzbereich kann
+unterschiedliche Anforderungen haben.
 </p>
+
 </div>
 
 
 <div class="benefit">
-<div class="benefit-icon">✓</div>
-<h3>Zuverlässigkeit</h3>
+
+<div class="benefit-icon">
+✓
+</div>
+
+<h3>
+Zuverlässigkeit
+</h3>
+
 <p>
 Klare Kommunikation, abgestimmte Termine
 und nachvollziehbare Abläufe.
 </p>
+
 </div>
 
 
 <div class="benefit">
-<div class="benefit-icon">✓</div>
-<h3>Dokumentation</h3>
+
+<div class="benefit-icon">
+✓
+</div>
+
+<h3>
+Dokumentation
+</h3>
+
 <p>
 Auf Wunsch können Reinigungsarbeiten
 nachvollziehbar dokumentiert werden.
 </p>
+
 </div>
 
 
 <div class="benefit">
-<div class="benefit-icon">✓</div>
-<h3>Region Stuttgart</h3>
+
+<div class="benefit-icon">
+✓
+</div>
+
+<h3>
+Region Stuttgart
+</h3>
+
 <p>
-Ansprechpartner für Unternehmen
-in Stuttgart und Umgebung.
+Ansprechpartner für Unternehmen in
+Stuttgart und Umgebung.
 </p>
+
 </div>
 
 
@@ -1357,7 +1348,174 @@ in Stuttgart und Umgebung.
 </section>
 
 
-<!-- ABLAUF -->
+<!-- =========================
+     VDI / TECHNISCHE STANDARDS
+========================= -->
+
+<section class="section-light" id="standards">
+
+<div class="container">
+
+<div class="section-label">
+VDI-Richtlinien
+</div>
+
+<h2 class="section-title">
+Technische Standards &amp; Richtlinien
+</h2>
+
+<p class="standards-intro">
+Bei der Planung und Durchführung technischer
+Reinigungsarbeiten berücksichtigen wir – abhängig
+von Anlage, Nutzung und Aufgabenstellung – die
+jeweils relevanten technischen Regeln und
+VDI-Richtlinien.
+</p>
+
+
+<div class="standards-grid">
+
+
+<div class="standard-card">
+
+<div class="standard-number">
+VDI 6022
+</div>
+
+<h3>
+Hygiene in RLT-Anlagen
+</h3>
+
+<p>
+Die VDI 6022 behandelt Hygieneanforderungen
+an raumlufttechnische Anlagen und Geräte.
+Sie ist insbesondere für hygienische Aspekte
+bei RLT-Systemen relevant.
+</p>
+
+</div>
+
+
+<div class="standard-card">
+
+<div class="standard-number">
+VDI/ÖFR/SWKI 6022 Blatt 8
+</div>
+
+<h3>
+Reinigung von RLT-Anlagen und Luftleitungen
+</h3>
+
+<p>
+Diese Richtlinie behandelt die Reinigung von
+RLT-Anlagen und Luftleitungen und ist für
+entsprechende Reinigungsaufgaben besonders
+relevant.
+</p>
+
+</div>
+
+
+<div class="standard-card">
+
+<div class="standard-number">
+VDI/ÖFR/SWKI-MT 6022 Blatt 8.1
+</div>
+
+<h3>
+Qualifizierung von Personal
+</h3>
+
+<p>
+Die Richtlinie behandelt die Qualifizierung
+von Personal für die Reinigung von
+RLT-Anlagen und Luftleitungen.
+</p>
+
+</div>
+
+
+<div class="standard-card">
+
+<div class="standard-number">
+VDI 2052 Blatt 1
+</div>
+
+<h3>
+Raumlufttechnik – Küchen
+</h3>
+
+<p>
+Die Richtlinie beschreibt technische
+Anforderungen im Zusammenhang mit
+raumlufttechnischen Anlagen in Küchen.
+</p>
+
+</div>
+
+
+<div class="standard-card">
+
+<div class="standard-number">
+VDI 2052 Blatt 2
+</div>
+
+<h3>
+Reinigung von Küchenabluftanlagen
+</h3>
+
+<p>
+Diese Richtlinie behandelt die Reinigung
+von Abluftanlagen in gewerblichen Küchen
+und berücksichtigt dabei unter anderem
+Brandschutz, Hygiene und Betriebssicherheit.
+</p>
+
+</div>
+
+
+<div class="standard-card">
+
+<div class="standard-number">
+VDI-MT 2052 Blatt 3
+</div>
+
+<h3>
+Schulung für Küchenabluftanlagen
+</h3>
+
+<p>
+Die Richtlinie beschreibt ein Schulungskonzept
+für Personen, die mit Betrieb, Instandhaltung
+und Reinigung von Küchenabluftanlagen
+befasst sind.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="standard-note">
+
+<strong>Wichtiger Hinweis:</strong>
+VDI-Richtlinien sind technische Regelwerke und
+nicht pauschal mit gesetzlichen Vorschriften
+gleichzusetzen. Welche Anforderungen im
+Einzelfall anzuwenden sind, hängt von der
+jeweiligen Anlage, Nutzung und Aufgabenstellung ab.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABLAUF
+========================= -->
 
 <section class="section-light" id="ablauf">
 
@@ -1372,8 +1530,9 @@ Von der Anfrage bis zur Reinigung.
 </h2>
 
 <p class="section-intro">
-Ein klarer Ablauf schafft Transparenz und sorgt dafür,
-dass die Anforderungen Ihrer Anlage verstanden werden.
+Ein klarer Ablauf schafft Transparenz und sorgt
+dafür, dass die Anforderungen Ihrer Anlage
+verstanden werden.
 </p>
 
 
@@ -1381,48 +1540,88 @@ dass die Anforderungen Ihrer Anlage verstanden werden.
 
 
 <div class="step">
-<div class="step-number">1</div>
-<h3>Anfrage</h3>
+
+<div class="step-number">
+1
+</div>
+
+<h3>
+Anfrage
+</h3>
+
 <p>
 Sie kontaktieren uns mit Ihrem Anliegen.
 </p>
+
 </div>
 
 
 <div class="step">
-<div class="step-number">2</div>
-<h3>Beratung</h3>
+
+<div class="step-number">
+2
+</div>
+
+<h3>
+Beratung
+</h3>
+
 <p>
 Wir besprechen Anforderungen und Einsatzbereich.
 </p>
+
 </div>
 
 
 <div class="step">
-<div class="step-number">3</div>
-<h3>Besichtigung</h3>
+
+<div class="step-number">
+3
+</div>
+
+<h3>
+Besichtigung
+</h3>
+
 <p>
 Bei Bedarf erfolgt eine Vor-Ort-Besichtigung.
 </p>
+
 </div>
 
 
 <div class="step">
-<div class="step-number">4</div>
-<h3>Reinigung</h3>
+
+<div class="step-number">
+4
+</div>
+
+<h3>
+Reinigung
+</h3>
+
 <p>
 Durchführung der vereinbarten Arbeiten.
 </p>
+
 </div>
 
 
 <div class="step">
-<div class="step-number">5</div>
-<h3>Dokumentation</h3>
+
+<div class="step-number">
+5
+</div>
+
+<h3>
+Dokumentation
+</h3>
+
 <p>
 Auf Wunsch nachvollziehbare Dokumentation
 der ausgeführten Arbeiten.
 </p>
+
 </div>
 
 
@@ -1433,7 +1632,9 @@ der ausgeführten Arbeiten.
 </section>
 
 
-<!-- FAQ -->
+<!-- =========================
+     FAQ
+========================= -->
 
 <section id="faq">
 
@@ -1452,6 +1653,7 @@ Häufige Fragen
 
 
 <details>
+
 <summary>
 Welche Anlagen reinigen Sie?
 </summary>
@@ -1459,39 +1661,43 @@ Welche Anlagen reinigen Sie?
 <p>
 Unser Schwerpunkt liegt auf technischen Anlagen,
 Lüftungs- und RLT-Systemen, Küchenabluft,
-VDK-Anlagen sowie industriellen und technischen Komponenten.
+VDK-Anlagen sowie industriellen und technischen
+Komponenten.
 </p>
 
 </details>
 
 
 <details>
+
 <summary>
 Arbeiten Sie auch für Unternehmen?
 </summary>
 
 <p>
-Ja. KAANTEC richtet sich insbesondere an gewerbliche
-und industrielle Kunden.
+Ja. KAANTEC richtet sich insbesondere an
+gewerbliche und industrielle Kunden.
 </p>
 
 </details>
 
 
 <details>
+
 <summary>
 Kann ich zunächst eine unverbindliche Anfrage stellen?
 </summary>
 
 <p>
-Ja. Kontaktieren Sie uns telefonisch oder per E-Mail
-und schildern Sie kurz Ihr Anliegen.
+Ja. Kontaktieren Sie uns telefonisch oder per
+E-Mail und schildern Sie kurz Ihr Anliegen.
 </p>
 
 </details>
 
 
 <details>
+
 <summary>
 In welcher Region sind Sie tätig?
 </summary>
@@ -1504,30 +1710,33 @@ Unser Schwerpunkt liegt in Stuttgart und Umgebung.
 
 
 <details>
+
 <summary>
-Welche Normen und Richtlinien sind bei der Reinigung relevant?
+Sind die Vorher-/Nachher-Bilder echte Kundenprojekte?
 </summary>
 
 <p>
-Das hängt von der jeweiligen Anlage und Aufgabenstellung ab.
-Für RLT-Anlagen können unter anderem die Richtlinienreihe
-VDI 6022 sowie VDI/ÖFR/SWKI 6022 Blatt 8 relevant sein.
-Bei gewerblichen Küchen und Küchenabluftanlagen ist insbesondere
-die Richtlinienreihe VDI 2052 zu berücksichtigen.
+Nein. Die auf dieser Website verwendeten
+Darstellungen sind beispielhafte Visualisierungen
+und keine konkreten Kundenreferenzen.
 </p>
 
 </details>
 
 
 <details>
+
 <summary>
-Sind die Vorher-/Nachher-Bilder echte Kundenprojekte?
+Welche VDI-Richtlinien sind für Ihre Leistungen relevant?
 </summary>
 
 <p>
-Nein. Die auf dieser Website verwendeten Aufnahmen dienen
-ausschließlich als beispielhafte Visualisierungen typischer
-Reinigungsarbeiten und stellen keine konkreten Kundenprojekte dar.
+Je nach Anlage und Aufgabenstellung können unter
+anderem Richtlinien aus den Reihen VDI 6022 und
+VDI 2052 relevant sein. Für die Reinigung von
+RLT-Anlagen und Luftleitungen sowie für
+Küchenabluftanlagen bestehen entsprechende
+Richtlinien und Qualifizierungsanforderungen.
 </p>
 
 </details>
@@ -1540,7 +1749,9 @@ Reinigungsarbeiten und stellen keine konkreten Kundenprojekte dar.
 </section>
 
 
-<!-- KONTAKT -->
+<!-- =========================
+     KONTAKT
+========================= -->
 
 <section class="section-light" id="kontakt">
 
@@ -1561,7 +1772,9 @@ Kontaktieren Sie uns gerne.
 
 <div class="contact-item">
 
-<strong>Telefon</strong>
+<strong>
+Telefon
+</strong>
 
 <a href="tel:+4917634680568">
 0176 34680568
@@ -1572,7 +1785,9 @@ Kontaktieren Sie uns gerne.
 
 <div class="contact-item">
 
-<strong>E-Mail</strong>
+<strong>
+E-Mail
+</strong>
 
 <a href="mailto:info@kaantec.de">
 info@kaantec.de
@@ -1583,7 +1798,9 @@ info@kaantec.de
 
 <div class="contact-item">
 
-<strong>Adresse</strong>
+<strong>
+Adresse
+</strong>
 
 Schliffkopfstraße 5<br>
 70569 Stuttgart
@@ -1593,7 +1810,9 @@ Schliffkopfstraße 5<br>
 
 <div class="contact-item">
 
-<strong>Einsatzgebiet</strong>
+<strong>
+Einsatzgebiet
+</strong>
 
 Stuttgart und Umgebung
 
@@ -1628,7 +1847,6 @@ type="tel"
 name="Telefon"
 placeholder="Ihre Telefonnummer"
 >
-
 
 <select name="Leistung">
 
@@ -1682,8 +1900,9 @@ required
 >
 
 <span>
-Ich habe die Datenschutzerklärung gelesen und stimme
-der Verarbeitung meiner Angaben zur Bearbeitung meiner Anfrage zu.
+Ich habe die Datenschutzerklärung gelesen und
+stimme der Verarbeitung meiner Angaben zur
+Bearbeitung meiner Anfrage zu.
 </span>
 
 </label>
@@ -1696,7 +1915,6 @@ class="btn btn-orange"
 Anfrage senden
 </button>
 
-
 </form>
 
 </div>
@@ -1704,7 +1922,9 @@ Anfrage senden
 </section>
 
 
-<!-- IMPRESSUM -->
+<!-- =========================
+     IMPRESSUM
+========================= -->
 
 <section id="impressum">
 
@@ -1720,13 +1940,19 @@ Angaben gemäß § 5 DDG
 
 <p>
 
-<strong>KAANTEC</strong><br>
+<strong>
+KAANTEC
+</strong>
+<br>
 
-Inhaber: Bilal Misirlioglu<br>
+Inhaber: Bilal Misirlioglu
+<br>
 
-Schliffkopfstraße 5<br>
+Schliffkopfstraße 5
+<br>
 
-70569 Stuttgart<br>
+70569 Stuttgart
+<br>
 
 Deutschland
 
@@ -1757,8 +1983,8 @@ Umsatzsteuer
 </h2>
 
 <p>
-Eine Umsatzsteuer-Identifikationsnummer wird nur angegeben,
-wenn eine solche tatsächlich vergeben wurde.
+Eine Umsatzsteuer-Identifikationsnummer wird nur
+angegeben, wenn eine solche tatsächlich vergeben wurde.
 </p>
 
 
@@ -1767,8 +1993,10 @@ Verantwortlich für den Inhalt
 </h2>
 
 <p>
-Bilal Misirlioglu<br>
-Schliffkopfstraße 5<br>
+Bilal Misirlioglu
+<br>
+Schliffkopfstraße 5
+<br>
 70569 Stuttgart
 </p>
 
@@ -1777,7 +2005,9 @@ Schliffkopfstraße 5<br>
 </section>
 
 
-<!-- DATENSCHUTZ -->
+<!-- =========================
+     DATENSCHUTZ
+========================= -->
 
 <section class="section-light" id="datenschutz">
 
@@ -1793,15 +2023,20 @@ Datenschutzerklärung
 </h2>
 
 <p>
-KAANTEC<br>
-Inhaber: Bilal Misirlioglu<br>
-Schliffkopfstraße 5<br>
-70569 Stuttgart<br>
+KAANTEC
+<br>
+Inhaber: Bilal Misirlioglu
+<br>
+Schliffkopfstraße 5
+<br>
+70569 Stuttgart
+<br>
 Deutschland
 </p>
 
 <p>
-Telefon: 0176 34680568<br>
+Telefon: 0176 34680568
+<br>
 E-Mail: info@kaantec.de
 </p>
 
@@ -1811,9 +2046,9 @@ E-Mail: info@kaantec.de
 </h2>
 
 <p>
-Beim Besuch dieser Website können technisch notwendige Daten
-verarbeitet werden, die für die Bereitstellung und Sicherheit
-der Website erforderlich sind.
+Beim Besuch dieser Website können technisch notwendige
+Daten verarbeitet werden, die für die Bereitstellung und
+Sicherheit der Website erforderlich sind.
 </p>
 
 
@@ -1822,9 +2057,10 @@ der Website erforderlich sind.
 </h2>
 
 <p>
-Wenn Sie uns per E-Mail, Telefon oder über das Kontaktformular
-kontaktieren, verarbeiten wir die von Ihnen mitgeteilten Angaben
-zur Bearbeitung Ihrer Anfrage und zur Kommunikation mit Ihnen.
+Wenn Sie uns per E-Mail, Telefon oder über das
+Kontaktformular kontaktieren, verarbeiten wir die von
+Ihnen mitgeteilten Angaben zur Bearbeitung Ihrer Anfrage
+und zur Kommunikation mit Ihnen.
 </p>
 
 
@@ -1833,9 +2069,10 @@ zur Bearbeitung Ihrer Anfrage und zur Kommunikation mit Ihnen.
 </h2>
 
 <p>
-Die Verarbeitung personenbezogener Daten erfolgt, soweit
-erforderlich, auf Grundlage der jeweils anwendbaren Vorschriften
-der Datenschutz-Grundverordnung (DSGVO).
+Die Verarbeitung personenbezogener Daten erfolgt,
+soweit erforderlich, auf Grundlage der jeweils
+anwendbaren Vorschriften der Datenschutz-Grundverordnung
+(DSGVO).
 </p>
 
 
@@ -1855,9 +2092,10 @@ gesetzliche Aufbewahrungspflichten bestehen.
 </h2>
 
 <p>
-Sie haben im Rahmen der gesetzlichen Voraussetzungen insbesondere
-das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung
-der Verarbeitung und Widerspruch gegen bestimmte Verarbeitungen.
+Sie haben im Rahmen der gesetzlichen Voraussetzungen
+insbesondere das Recht auf Auskunft, Berichtigung,
+Löschung, Einschränkung der Verarbeitung und Widerspruch
+gegen bestimmte Verarbeitungen.
 </p>
 
 
@@ -1866,13 +2104,14 @@ der Verarbeitung und Widerspruch gegen bestimmte Verarbeitungen.
 </h2>
 
 <p>
-Auf dieser Website werden derzeit keine Analyse-, Werbe-
-oder Trackingdienste eingebunden.
+Auf dieser Website werden derzeit keine Analyse-,
+Werbe- oder Trackingdienste eingebunden.
 </p>
 
 <p>
 Sollten zukünftig externe Dienste eingebunden werden,
-muss diese Datenschutzerklärung entsprechend angepasst werden.
+muss diese Datenschutzerklärung entsprechend angepasst
+werden.
 </p>
 
 
@@ -1881,8 +2120,9 @@ muss diese Datenschutzerklärung entsprechend angepasst werden.
 </h2>
 
 <p>
-Bei Fragen zur Verarbeitung personenbezogener Daten können
-Sie uns über die oben genannte E-Mail-Adresse kontaktieren.
+Bei Fragen zur Verarbeitung personenbezogener Daten
+können Sie uns über die oben genannte E-Mail-Adresse
+kontaktieren.
 </p>
 
 </div>
@@ -1890,7 +2130,9 @@ Sie uns über die oben genannte E-Mail-Adresse kontaktieren.
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1906,8 +2148,8 @@ KAAN<span>TEC</span>
 </div>
 
 <p>
-Industrielle & technische Reinigung für Unternehmen
-in Stuttgart und Umgebung.
+Industrielle &amp; technische Reinigung für
+Unternehmen in Stuttgart und Umgebung.
 </p>
 
 </div>
@@ -1998,12 +2240,6 @@ Rechtliches
 <ul>
 
 <li>
-<a href="#normen">
-Normen & Richtlinien
-</a>
-</li>
-
-<li>
 <a href="#impressum">
 Impressum
 </a>
@@ -2030,7 +2266,7 @@ Datenschutzerklärung
 </div>
 
 <div>
-Technische & industrielle Reinigung
+Technische &amp; industrielle Reinigung
 </div>
 
 </div>
@@ -2068,7 +2304,5 @@ document
 
 </script>
 
-
 </body>
-
 </html>
