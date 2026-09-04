@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://kaantec.de/</loc>
-  </url>
-
+  <url><loc>https://kaantec.de/</loc></url>
+  <url><loc>https://kaantec.de/abluftreinigung.html</loc></url>
+  <url><loc>https://kaantec.de/brandschutz-hygiene.html</loc></url>
+  <url><loc>https://kaantec.de/facility-management.html</loc></url>
+  <url><loc>https://kaantec.de/gebaeudereinigung.html</loc></url>
+  <url><loc>https://kaantec.de/grosskuechenreinigung.html</loc></url>
+  <url><loc>https://kaantec.de/industriereinigung.html</loc></url>
+  <url><loc>https://kaantec.de/instandhaltungsarbeiten.html</loc></url>
+  <url><loc>https://kaantec.de/lueftungsreinigung.html</loc></url>
+  <url><loc>https://kaantec.de/maschinenwartung.html</loc></url>
+  <url><loc>https://kaantec.de/vdk-anlagen.html</loc></url>
 </urlset>
