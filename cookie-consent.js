@@ -1,3 +1,18 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var link = document.getElementById("cookie-settings-link");
+
+  if (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      if (window.__openCookieBanner) {
+        window.__openCookieBanner();
+      }
+    });
+  }
+});
+</script>
 /* KAANTEC Cookie-Consent + Google Analytics 4
    GA4 wird erst nach ausdrücklicher Zustimmung geladen.
    Die Entscheidung wird lokal unter "kaantec_cookie_consent" gespeichert.
