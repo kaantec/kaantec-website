@@ -1,21 +1,118 @@
-document.addEventListener('DOMContentLoaded',()=>{
- const nav=document.getElementById('navLinks'),button=document.querySelector('.menu-button');
- if(button)button.addEventListener('click',()=>{const open=nav.classList.toggle('active');button.setAttribute('aria-expanded',String(open));});
- document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('active')));
- const reveal=document.querySelectorAll('section:not(.hero) .container > *');
- if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('reveal-ready');const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.1});reveal.forEach(el=>{el.dataset.reveal='';io.observe(el)})}
- const canvas=document.querySelector('.hero-canvas');
- if(!canvas||!window.THREE)return;const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
- let renderer,scene,camera,group,frame=0,raf=0;
- try{renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:false,powerPreference:'low-power'});renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));renderer.setSize(canvas.clientWidth,canvas.clientHeight,false);scene=new THREE.Scene();camera=new THREE.PerspectiveCamera(34,canvas.clientWidth/canvas.clientHeight,.1,100);camera.position.set(0,0,11);group=new THREE.Group();group.position.set(innerWidth<=820?.65:2.15,.05,0);group.scale.setScalar(innerWidth<=820?.78:1.35);scene.add(group);
- const mat=(color,metal=0.45,rough=.4)=>new THREE.MeshStandardMaterial({color,metalness:metal,roughness:rough});const steel=mat(0x91a9aa,.75,.3),dark=mat(0x34464a,.5,.42),lime=mat(0xd8ff54,.35,.34),glass=new THREE.MeshStandardMaterial({color:0x8eb4b1,metalness:.5,roughness:.24,transparent:true,opacity:.34});
- const box=(w,h,d,m,x,y,z)=>{const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);o.position.set(x,y,z);group.add(o);return o};
- // Abstract, low-poly ventilation plant: duct runs, housings, fan rings and service rails.
- box(4.9,.34,.48,steel,.3,-1.35,0);box(.36,2.55,.48,dark,2.58,-.1,0);box(3.9,.3,.42,steel,.2,1.24,0);box(.34,2.3,.42,steel,-1.65,.05,0);box(1.35,.95,.95,dark,-.2,.25,.08);box(1.08,.68,1.05,steel,1.36,-.28,.12);box(.72,.18,1.1,lime,1.36,.14,.12);
- const ring=new THREE.Mesh(new THREE.TorusGeometry(.55,.075,8,32),steel);ring.position.set(-.2,.25,.58);group.add(ring);const hub=new THREE.Mesh(new THREE.CylinderGeometry(.16,.16,.12,12),lime);hub.rotation.x=Math.PI/2;hub.position.set(-.2,.25,.6);group.add(hub);
- for(let i=0;i<7;i++){const fin=box(.08,.68,.035,steel,-.72+i*.16,.25,.56);fin.rotation.z=-.12}
- for(let i=0;i<4;i++){box(.035,2.2,.035,mat(0x667878,.65,.35),-2.15+i*.28,.02,.46)}
- scene.add(new THREE.HemisphereLight(0xc7e4e4,0x10191c,2));const key=new THREE.DirectionalLight(0xe5f0dc,3.4);key.position.set(3,5,7);scene.add(key);const rim=new THREE.PointLight(0xd8ff54,16,9);rim.position.set(-2,1,3);scene.add(rim);
- const resize=()=>{const w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()};new ResizeObserver(resize).observe(canvas);let px=0,py=0;if(reducedMotion){renderer.render(scene,camera)}else{window.addEventListener('pointermove',e=>{px=(e.clientX/innerWidth-.5)*.3;py=(e.clientY/innerHeight-.5)*.22},{passive:true});const animate=()=>{raf=requestAnimationFrame(animate);frame+=.006;group.rotation.y=Math.sin(frame)*.12+px;group.rotation.x=py;group.position.y=.05+Math.sin(frame*.8)*.04;renderer.render(scene,camera)};animate();document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(raf);else animate()})}
- }catch(e){if(renderer)renderer.dispose();console.error('KAANTEC 3D konnte nicht gestartet werden:',e)}
-});
+/* KAANTEC – Navigation, Scroll-Szenen, Vorher/Nachher-Regler. Keine externen Bibliotheken. */
+(function () {
+  "use strict";
+  var doc = document.documentElement;
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce) doc.classList.add("rm");
+
+  var clamp = function (v, a, b) { return Math.min(b, Math.max(a, v)); };
+  var lerp = function (a, b, t) { return a + (b - a) * t; };
+  var nums = function (s) { return String(s).split(",").map(parseFloat); };
+
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  }
+
+  ready(function () {
+    /* ---------- Menü ---------- */
+    var nav = document.getElementById("navLinks");
+    var button = document.querySelector(".menu-button");
+    if (button && nav) {
+      button.addEventListener("click", function () {
+        var open = nav.classList.toggle("active");
+        button.setAttribute("aria-expanded", String(open));
+        button.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
+      });
+      nav.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () {
+          nav.classList.remove("active");
+          button.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    /* ---------- Cookie-Einstellungen im Footer ---------- */
+    var cookieLink = document.getElementById("cookie-settings-link");
+    if (cookieLink) {
+      cookieLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (window.__openCookieBanner) window.__openCookieBanner();
+      });
+    }
+
+    /* ---------- Vorher/Nachher-Regler ---------- */
+    document.querySelectorAll(".ba-box").forEach(function (box) {
+      var input = box.querySelector(".ba-range");
+      if (!input) return;
+      var set = function () { box.style.setProperty("--pos", input.value + "%"); };
+      input.addEventListener("input", set);
+      set();
+    });
+
+    /* ---------- Header: solid nach dem Hero-Beginn ---------- */
+    var header = document.querySelector("header");
+    var scenes = Array.prototype.slice.call(document.querySelectorAll("[data-scene]"));
+    var heroes = Array.prototype.slice.call(document.querySelectorAll("[data-parallax]"));
+
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var vh = window.innerHeight;
+      if (header) header.classList.toggle("solid", window.scrollY > 40);
+
+      if (!reduce) {
+        scenes.forEach(function (scene) {
+          var r = scene.getBoundingClientRect();
+          if (r.bottom < -vh || r.top > vh * 2) return;
+          var span = r.height - vh;
+          var p = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
+          scene.style.setProperty("--p", p.toFixed(4));
+
+          scene.querySelectorAll("[data-in]").forEach(function (el) {
+            var v = nums(el.getAttribute("data-in"));       /* a,b : Einblenden, bleibt sichtbar */
+            el.style.opacity = clamp((p - v[0]) / Math.max(v[1] - v[0], 0.001), 0, 1).toFixed(3);
+          });
+          scene.querySelectorAll("[data-fade]").forEach(function (el) {
+            var v = nums(el.getAttribute("data-fade"));     /* a,b,c,d : ein, halten, aus */
+            var o = p < v[1] ? (p - v[0]) / Math.max(v[1] - v[0], 0.001)
+                             : (v[3] - p) / Math.max(v[3] - v[2], 0.001);
+            if (p >= v[1] && p <= v[2]) o = 1;
+            o = clamp(o, 0, 1);
+            el.style.opacity = o.toFixed(3);
+            el.style.transform = "translate3d(0," + ((1 - o) * 28).toFixed(1) + "px,0)";
+            el.style.visibility = o < 0.01 ? "hidden" : "visible";
+          });
+          scene.querySelectorAll("[data-zoom]").forEach(function (el) {
+            var v = nums(el.getAttribute("data-zoom"));     /* start,ende,scale0,scale1 */
+            var t = clamp((p - v[0]) / Math.max(v[1] - v[0], 0.001), 0, 1);
+            var s = lerp(v[2], v[3], t);
+            var ox = el.getAttribute("data-origin") || "50% 50%";
+            el.style.transformOrigin = ox;
+            el.style.transform = "scale(" + s.toFixed(4) + ")";
+          });
+          var wipe = scene.querySelector("[data-wipe]");
+          if (wipe) {
+            var w = nums(wipe.getAttribute("data-wipe"));   /* start,ende */
+            var t2 = clamp((p - w[0]) / Math.max(w[1] - w[0], 0.001), 0, 1);
+            scene.style.setProperty("--w", (t2 * 100).toFixed(2) + "%");
+          }
+          var hint = scene.querySelector(".scroll-hint");
+          if (hint) hint.style.opacity = p > 0.04 ? 0 : 1;
+        });
+
+        heroes.forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.bottom < 0 || r.top > vh) return;
+          el.style.setProperty("--p", clamp(-r.top / r.height, 0, 1).toFixed(4));
+        });
+      }
+    }
+    function onScroll() {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    update();
+  });
+})();
