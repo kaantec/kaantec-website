@@ -81,6 +81,47 @@
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
+
+    /* ---------- Rundgang (scrollgesteuert, Stationen) ---------- */
+    var tour = document.getElementById("rundgang");
+    if (tour && !reduce) {
+      var sts = Array.prototype.slice.call(tour.querySelectorAll(".st"));
+      var tbg = Array.prototype.slice.call(tour.querySelectorAll(".tour-bg img"));
+      var cnt = tour.querySelector(".tour-count b");
+      var NS = sts.length, tcur = 0;
+      var tloop = function () {
+        requestAnimationFrame(tloop);
+        var r = tour.getBoundingClientRect(), vh = window.innerHeight;
+        if (r.bottom < -vh || r.top > vh * 2) return;
+        var span = r.height - vh;
+        var tp = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
+        tcur += (tp - tcur) * 0.12;
+        var x = tcur * NS, active = 0;
+        sts.forEach(function (el, i) {
+          var k = clamp(x - i, 0, 1);
+          var a, sc, wipe = 0, last = i === NS - 1, first = i === 0;
+          var inside = x >= i - 0.16 && x <= i + 1.0001;
+          if (!inside) { el.style.opacity = 0; el.classList.remove("on"); if (tbg[i]) tbg[i].style.opacity = 0; return; }
+          var ein = first ? 1 : smooth(clamp((x - i + 0.15) / 0.35, 0, 1));
+          var aus = last ? 1 : 1 - smooth((k - 0.8) / 0.2);
+          a = Math.min(ein, aus);
+          sc = (first ? 1 : 0.7 + 0.3 * ein) + (last ? 0 : 0.75 * (1 - aus));
+          wipe = smooth((k - 0.2) / 0.55);
+          if (a > 0.5) active = i;
+          var rot = (1 - ein) * -10 + (1 - aus) * 8;
+          el.style.opacity = a.toFixed(3);
+          el.style.transform = "scale(" + sc.toFixed(3) + ") rotateY(" + rot.toFixed(2) + "deg)";
+          el.classList.toggle("on", a > 0.6);
+          var fr = el.querySelector(".st-frame");
+          if (fr && !fr.classList.contains("st-solo")) fr.style.setProperty("--w", (wipe * 100).toFixed(1) + "%");
+          if (fr && fr.classList.contains("st-solo")) { var im = fr.querySelector("img"); im.style.transform = "scale(" + (1 + k * 0.12).toFixed(3) + ")"; }
+          if (tbg[i]) tbg[i].style.opacity = a.toFixed(3);
+        });
+        if (cnt) cnt.textContent = "0" + (active + 1);
+      };
+      requestAnimationFrame(tloop);
+    }
+
     /* ---------- Kanalfahrt (nur Startseite) ---------- */
     var canvas = document.getElementById("bg");
     var scrub = document.getElementById("scrub");

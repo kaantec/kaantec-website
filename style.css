@@ -305,3 +305,45 @@ footer{position:relative;z-index:2;background:#04070b;color:var(--mut);padding:c
 .gl-words{perspective:1200px}
 .gk{position:absolute;left:50%;top:50%;width:clamp(120px,22vw,300px);aspect-ratio:4/5;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.3);box-shadow:0 20px 60px rgba(0,0,0,.55);opacity:0;will-change:transform,opacity}
 .gk img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* Rundgang: Stationen, scrollgesteuert */
+.tour{position:relative;z-index:2;background:var(--bg);height:560vh}
+.tour-pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;perspective:1400px}
+.tour-bg{position:absolute;inset:0}
+.tour-bg img{position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover;filter:blur(34px) brightness(.38) saturate(.9);opacity:0}
+.tour-bg img:first-child{opacity:1}
+.tour-head{position:absolute;z-index:3;left:0;right:0;top:92px;padding:0 clamp(20px,4vw,48px);display:flex;flex-direction:column;align-items:flex-start;gap:0;pointer-events:none}
+.tour-head h2{font-weight:400;font-size:clamp(26px,3.6vw,52px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 0;max-width:12em;text-shadow:0 2px 24px rgba(0,0,0,.5)}
+.tour-head>div,.tour-head .badge{align-self:flex-start}
+.tour-count{position:absolute;right:clamp(20px,4vw,48px);top:4px;margin:0;font:500 12px/1 "Archivo",system-ui,sans-serif;letter-spacing:.15em;color:rgba(255,255,255,.75)}
+.tour-count b{font-weight:600;color:#fff}
+.tour-hint{position:absolute;z-index:3;left:50%;bottom:16px;transform:translateX(-50%);margin:0;font:500 10px/1 "Archivo",system-ui,sans-serif;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.tour-stage{position:absolute;inset:0}
+.st{position:absolute;inset:0;margin:0;display:flex;align-items:center;justify-content:center;opacity:0;will-change:transform,opacity;pointer-events:none}
+.st.on{pointer-events:auto}
+.st-frame{position:relative;aspect-ratio:var(--ar);width:min(88vw,calc(54vh*var(--ar)),760px);margin-left:min(14vw,200px);margin-top:8vh;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.25);box-shadow:0 30px 90px rgba(0,0,0,.6)}
+.st-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.st-before{clip-path:inset(0 0 0 var(--w,0%))}
+.st-line{position:absolute;top:0;bottom:0;left:var(--w,0%);width:2px;background:#fff;box-shadow:0 0 18px rgba(255,255,255,.8);transform:translateX(-1px)}
+.st-cap{position:absolute;left:clamp(20px,4vw,48px);bottom:clamp(40px,12vh,120px);width:min(360px,calc(100vw - 40px));display:flex;flex-direction:column;gap:8px;padding:18px 20px;border-radius:14px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.st-cap .mono{font:500 10px/1 "Archivo",system-ui,sans-serif;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.st-cap strong{font-weight:500;font-size:clamp(20px,2.2vw,28px);line-height:1.1;letter-spacing:-.01em}
+.st-cap span:not(.mono){font-size:14px;line-height:1.5;color:rgba(255,255,255,.82)}
+.st-cap a{align-self:flex-start;margin-top:4px;color:#fff;font-size:13px;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.5)}
+@media(max-width:900px){
+ .tour-head{top:76px}
+ .st-frame{margin-left:0;width:min(86vw,calc(46vh*var(--ar)));margin-top:-6vh}
+ .st-cap{left:16px;right:16px;width:auto;bottom:34px;padding:14px 16px}
+ .st-cap span:not(.mono){font-size:13px}
+}
+/* ohne JS / reduzierte Bewegung: einfache Liste */
+html:not(.js) .tour,html.rm .tour{height:auto}
+html:not(.js) .tour-pin,html.rm .tour-pin{position:static;height:auto;padding:90px 0 40px}
+html:not(.js) .tour-bg,html.rm .tour-bg,html:not(.js) .tour-hint,html.rm .tour-hint,html:not(.js) .tour-count,html.rm .tour-count{display:none}
+html:not(.js) .tour-head,html.rm .tour-head{position:static;margin-bottom:24px}
+html:not(.js) .tour-stage,html.rm .tour-stage{position:static}
+html:not(.js) .st,html.rm .st{position:static;opacity:1;transform:none!important;flex-direction:column;gap:16px;margin:0 16px 56px}
+html:not(.js) .st-frame,html.rm .st-frame{margin:0;width:min(100%,520px)}
+html:not(.js) .st-cap,html.rm .st-cap{position:static;width:min(100%,520px)}
+html:not(.js) .st-before,html.rm .st-before{clip-path:inset(0 0 0 50%)}
+html:not(.js) .st-line,html.rm .st-line{left:50%}
